@@ -13,12 +13,99 @@ body {
 // font-family: 'Exo 2', sans-serif;
 // font-family: 'Open Sans', sans-serif;
 
+// Общие Элементы/блоки 
+
+// Навигационные точки 
+.dots {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  left: 46%;
+  height: 16px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.dot:focus {
+  width: 13px;
+  height: 13px;
+  opacity: 1;
+}
+
+// Кнопки Лево-Право 
+
+.buttons-scroll {
+  position: absolute;
+  width: 100.5%;
+  left: -3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-left,
+.button-right {
+  position: relative;
+  width: 48px;
+  height: 45px;
+  background: #FFF8FE;
+  border-radius: 2px;
+  border: none;
+}
+
+.button-left::before,
+.button-right::before {
+  position: absolute;
+  content: '';
+  top: 35%;
+  right: 25%;
+  width: 12px;
+  height: 12px;
+  border-right: 2.5px solid #A0148E;
+  border-top: 2.5px solid #A0148E;
+  transform: rotate(225deg);
+}
+
+.button-right::before {
+  right: 40%;
+  transform: rotate(45deg);
+}
+
+// Заголовок 2го уровня
+.title-h2 {
+  text-transform: uppercase;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 30px;
+  color: #2D0027;
+}
+
+
 
 .preview {
   position: relative;
+  margin-bottom: 52px;
 
   &__image {
     border-radius: 3px;
+  }
+
+  &__gradient::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 100%);
+    opacity: 0.3;
   }
 
   &__description {
@@ -59,31 +146,12 @@ body {
   }
 
   &__dots {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    gap: 11px;
     bottom: 9%;
-    left: 46%;
-    height: 16px;
   }
 
   &__dot {
-    width: 10px;
-    height: 10px;
-    padding: 1px;
     background: #FFFFFF;
-    border: none;
-    border-radius: 50%;
     opacity: 0.3;
-    outline: none;
-    cursor: pointer;
-  }
-
-  &__dot:focus {
-    width: 13px;
-    height: 13px;
-    opacity: 1;
   }
 
   &__dot-active {
@@ -91,41 +159,72 @@ body {
     height: 13px;
     opacity: 1;
   }
+
+  &__buttons-scroll {
+    top: 45%;
+  }
 }
 
-.buttons {
-  position: absolute;
-  width: 100.5%;
-  top: 45%;
-  left: -3px;
-  display: flex;
-  justify-content: space-between;
-}
 
-.button-left,
-.button-right {
-  position: relative;
-  width: 48px;
-  height: 45px;
-  background: #FFF8FE;
-  border-radius: 2px;
-  border: none;
-}
+.categories {
+  height: 332px;
 
-.button-left::before,
-.button-right::before {
-  position: absolute;
-  content: '';
-  top: 35%;
-  right: 25%;
-  width: 12px;
-  height: 12px;
-  border-right: 2.5px solid #A0148E;
-  border-top: 2.5px solid #A0148E;
-  transform: rotate(225deg);
-}
+  &__title {
+    margin-bottom: 42px;
+  }
 
-.button-right::before {
-  right: 40%;
-  transform: rotate(45deg);
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 24px;
+    position: relative;
+  }
+
+  &__item {
+    border-radius: 3px;
+    position: relative;
+  }
+
+  &__item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    background: linear-gradient(180.17deg, rgba(82, 0, 71, 0) 39.47%, rgba(82, 0, 71, 0.85) 67.19%);
+    opacity: 0.5;
+    border-radius: 3px;
+  }
+
+  &__subtitle {
+    position: absolute;
+    top: 63%;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 22px;
+    z-index: 1;
+  }
+
+  &__dots {
+    bottom: -18%;
+  }
+
+  &__dot {
+    background: #A0148E;
+    opacity: 0.15;
+  }
+
+  &__dot-active {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+  }
+
+  &__buttons-scroll {
+    top: 38%;
+  }
 }

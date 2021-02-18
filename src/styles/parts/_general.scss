@@ -1,0 +1,131 @@
+body {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+}
+
+// font-family: 'Exo 2', sans-serif;
+// font-family: 'Open Sans', sans-serif;
+
+
+.preview {
+  position: relative;
+
+  &__image {
+    border-radius: 3px;
+  }
+
+  &__description {
+    position: absolute;
+    top: 6%;
+    left: 9%;
+    color: #ffffff;
+    font-family: "Exo 2", sans-serif;
+  }
+
+  &__title {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: -47px;
+  }
+
+  &__subtitle {
+    font-size: 60px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+  }
+
+  &__new-price {
+    background-color: #ffffff;
+    border-radius: 2px;
+    color: #A0148E;
+    margin-right: 5px;
+    padding: 5px 13px 7px 12px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  &__old-price {
+    text-decoration: 1px line-through;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px 13px 7px 12px;
+  }
+
+  &__dots {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    bottom: 9%;
+    left: 46%;
+    height: 16px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    padding: 1px;
+    background: #FFFFFF;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.3;
+    outline: none;
+    cursor: pointer;
+  }
+
+  &__dot:focus {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+  }
+
+  &__dot-active {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+  }
+}
+
+.buttons {
+  position: absolute;
+  width: 100.5%;
+  top: 45%;
+  left: -3px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-left,
+.button-right {
+  position: relative;
+  width: 48px;
+  height: 45px;
+  background: #FFF8FE;
+  border-radius: 2px;
+  border: none;
+}
+
+.button-left::before,
+.button-right::before {
+  position: absolute;
+  content: '';
+  top: 35%;
+  right: 25%;
+  width: 12px;
+  height: 12px;
+  border-right: 2.5px solid #A0148E;
+  border-top: 2.5px solid #A0148E;
+  transform: rotate(225deg);
+}
+
+.button-right::before {
+  right: 40%;
+  transform: rotate(45deg);
+}

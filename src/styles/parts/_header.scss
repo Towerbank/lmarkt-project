@@ -1,0 +1,252 @@
+.header {
+
+  &__up {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__location-nav {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    column-gap: 325px;
+  }
+
+  &__location {
+    position: relative;
+    border: none;
+    background-color: #FFFFFF;
+    color: #A0148E;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    font-size: 15px;
+    margin-left: -1px;
+    padding-left: 0;
+    text-align: start;
+    height: 15px;
+    align-self: center;
+  }
+
+  &__location::after {
+    position: absolute;
+    content: '';
+    top: 30%;
+    left: 83%;
+    width: 4px;
+    height: 4px;
+    border-top: 1.5px solid #A0148E;
+    border-right: 1.5px solid #A0148E;
+    transform: rotate(135deg);
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 35px;
+    font-size: 15px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #2D0027;
+    opacity: 0.3;
+  }
+
+  &__link:hover {
+    color: #D866C9;
+    opacity: 1;
+  }
+
+  &__social {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__icon-vk {
+    opacity: 0.3;
+    background: url(../img/vk.svg) no-repeat;
+    width: 25px;
+    height: 14px;
+  }
+
+  &__icon-vk:hover {
+    opacity: 1;
+    background: url(../img/vk-2.svg) no-repeat;
+  }
+
+  &__icon-fb {
+    opacity: 0.3;
+    background: url(../img/fb.svg) no-repeat;
+    width: 20px;
+    height: 18px;
+  }
+
+  &__icon-fb:hover {
+    opacity: 1;
+    background: url(../img/fb-2.svg) no-repeat;
+  }
+
+  &__icon-inst {
+    opacity: 0.3;
+    background: url(../img/inst.svg) no-repeat;
+    width: 20px;
+    height: 18px;
+  }
+
+  &__icon-inst:hover {
+    opacity: 1;
+    background: url(../img/inst-2.svg) no-repeat;
+  }
+
+  &__icon-tg {
+    opacity: 0.3;
+    background: url(../img/tg.svg) no-repeat;
+    width: 22px;
+    height: 17px;
+  }
+
+  &__icon-tg:hover {
+    opacity: 1;
+    background: url(../img/tg-2.svg) no-repeat;
+  }
+
+  &__down {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+
+  &__logo {
+    display: flex;
+    gap: 12px;
+    color: #A0148E;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-family: 'Exo 2', sans-serif;
+
+  }
+
+  &__catalog {
+    width: 141px;
+    height: 45px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    padding-left: 25px;
+    background: url(/img/catalog.svg) no-repeat 20% 50% #A0148E;
+  }
+
+  &__catalog:hover {
+    background: url(/img/catalog.svg) no-repeat 20% 50% #D866C9;
+  }
+
+  &__search-form {
+    width: 362px;
+    height: 45px;
+    font-size: 15px;
+    padding-left: 19px;
+    border: 3px solid #F9EFF7;
+    border-radius: 3px;
+    background-color: #FFF8FE;
+    outline: none;
+    opacity: 0.4;
+  }
+
+  &__search {
+    position: relative;
+  }
+
+  &__search-form::placeholder {
+    color: #A0148E;
+    opacity: 0.4;
+  }
+
+  &__magnifier {
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    cursor: pointer;
+  }
+
+  &__magnifier:hover {
+    opacity: 0.7;
+  }
+
+  &__search-form:hover {
+    opacity: 0.8;
+  }
+
+  &__number {
+    font-size: 24px;
+    color: #2D0027;
+    font-family: 'Exo 2', sans-serif;
+
+  }
+
+  &__telephone {
+    vertical-align: top;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 30px;
+    align-items: flex-end;
+    text-align: center;
+  }
+
+  &__point {
+    height: 45px;
+  }
+
+  &__menu-link {
+    text-decoration: none;
+
+  }
+
+  &__menu-link:hover {
+    opacity: 0.6;
+  }
+
+  &__icon {
+    margin-bottom: -10px;
+  }
+
+
+  &__subtitle {
+    font-size: 9px;
+    color: #A0148E;
+    opacity: 0.6;
+
+  }
+
+  &__subtitle:hover {
+    color: #D866C9;
+  }
+
+  &__point-4 {
+    position: relative;
+    margin-left: 5px;
+  }
+
+  &__icon-4 {
+    margin-left: -2px;
+  }
+
+  &__amount {
+    position: absolute;
+    color: #FFFFFF;
+    background: url(/img/Ellipse.svg) no-repeat 50% 30%;
+    top: 7%;
+    left: 37%;
+    font-size: 9px;
+    font-weight: bold;
+    width: 14px;
+  }
+}

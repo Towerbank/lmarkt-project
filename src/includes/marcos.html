@@ -1,4 +1,16 @@
-{% macro card(src, title, description) %}
+{% macro card(src, subtitle) %}
+<div class="categories__item">
+  <a href="">
+    <picture>
+      <source type="image/webp" srcset="img/{{src}}.webp">
+      <img class="categories__img" src="img/{{src}}.jpg" alt="">
+    </picture>
+    <h3 class='categories__subtitle'>{{ subtitle }}</h3>
+  </a>
+</div>
+{% endmacro %}
+
+<!-- {% macro cards(src, title, description) %}
 <div class="box__card">
   <div class="box__border">
     <picture>
@@ -10,11 +22,35 @@
   <p class='box__description'>{{ description|safe }}</p>
   <a href="#" class="box__button">подробнее</a>
 </div>
-{% endmacro %}
+{% endmacro %} -->
 
 {% macro webpImg(src) %}
 <picture>
   <source type="image/webp" srcset="img/{{src}}.webp">
   <img class="picture__img" src="img/{{src}}.jpg" alt="">
 </picture>
+{% endmacro %}
+
+{% macro products(src, description) %}
+<div class='products__item'>
+  <div class='products__points'>
+    <a href="#"><img src="img/heart.svg" alt=""></a>
+    <a href="#"><img src="img/compare.svg" alt=""></a>
+  </div>
+  <div class='products__img-text'>
+    <a href="#">
+      <picture>
+        <source type="image/webp" srcset="img/{{src}}.webp">
+        <img class='products__image' src="img/{{src}}.png" alt="">
+      </picture>
+    </a>
+    <a href="#">
+      <p class='products__subtitle'>{{ description|safe }}</p>
+    </a>
+  </div>
+  <div class='products__price-pic'>
+    <span class='products__price'>15980 ₽</span>
+    <a href="#"><img class='products__pic' src="img/basket.svg" alt=""></a>
+  </div>
+</div>
 {% endmacro %}

@@ -17,7 +17,6 @@ body {
 
 // Навигационные точки 
 .dots {
-  position: absolute;
   display: flex;
   align-items: center;
   gap: 11px;
@@ -43,22 +42,31 @@ body {
 
 // Кнопки Лево-Право 
 
-.buttons-scroll {
-  position: absolute;
-  width: 100.5%;
-  left: -3px;
-  display: flex;
-  justify-content: space-between;
-}
+// .buttons-scroll {
+//   position: absolute;
+//   width: 100.5%;
+//   left: -3px;
+//   display: flex;
+//   justify-content: space-between;
+// }
 
 .button-left,
 .button-right {
-  position: relative;
+  position: absolute;
   width: 48px;
   height: 45px;
   background: #FFF8FE;
   border-radius: 2px;
   border: none;
+  cursor: pointer;
+}
+
+.button-left {
+  left: -2px;
+}
+
+.button-right {
+  right: -2px;
 }
 
 .button-left::before,
@@ -146,6 +154,7 @@ body {
   }
 
   &__dots {
+    position: absolute;
     bottom: 9%;
   }
 
@@ -160,7 +169,8 @@ body {
     opacity: 1;
   }
 
-  &__buttons-scroll {
+  &__button-left,
+  &__button-right {
     top: 45%;
   }
 }
@@ -175,14 +185,15 @@ body {
 
   &__block {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 24px;
+    grid-template-columns: repeat(4, 283px);
+    column-gap: 26px;
     position: relative;
   }
 
   &__item {
     border-radius: 3px;
     position: relative;
+    height: 210px;
   }
 
   &__item::after {
@@ -190,8 +201,8 @@ body {
     width: 100%;
     height: 100%;
     position: absolute;
-    bottom: 2%;
-    left: 0;
+    bottom: 0;
+    left: 1px;
     background: linear-gradient(180.17deg, rgba(82, 0, 71, 0) 39.47%, rgba(82, 0, 71, 0.85) 67.19%);
     opacity: 0.5;
     border-radius: 3px;
@@ -210,7 +221,8 @@ body {
   }
 
   &__dots {
-    bottom: -18%;
+    position: absolute;
+    bottom: -20%;
   }
 
   &__dot {
@@ -224,7 +236,187 @@ body {
     opacity: 1;
   }
 
-  &__buttons-scroll {
-    top: 38%;
+  &__button-left,
+  &__button-right {
+    top: 39%;
+  }
+}
+
+.products {
+  margin-bottom: 100px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 283px);
+    gap: 26px;
+    position: relative;
+  }
+
+  &__item {
+    position: relative;
+    padding: 39px 38px 30px 26px;
+    border: 3px solid #FFF8FE;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__points {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    top: 4%;
+    right: 8%;
+    opacity: 0.3;
+  }
+
+
+  // &__item:nth-child(2) &__image {}
+
+  &__subtitle {
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    align-items: center;
+    color: #2D0027;
+  }
+
+  &__price-pic {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__price {
+    position: relative;
+    text-align: center;
+    background: #FFF8FE;
+    border-radius: 2px;
+    padding: 15px 20px 15px 20px;
+    align-items: center;
+    text-align: center;
+    color: #2D0027;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  &__item:first-of-type &__price {
+    color: #A0148E;
+  }
+
+  &__item:first-of-type &__price::before {
+    content: '18980 ₽';
+    position: absolute;
+    font-weight: bold;
+    font-size: 11px;
+    color: #2D0027;
+    opacity: 0.3;
+    bottom: 10%;
+    left: 27%;
+  }
+
+  &__pic {
+    padding: 10px;
+    border: 3px solid #F7ECF5;
+    border-radius: 2px;
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: -10%;
+  }
+
+  &__dot {
+    background: #A0148E;
+    opacity: 0.15;
+  }
+
+  &__dot-active {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+  }
+
+  &__button-left,
+  &__button-right {
+    bottom: 43%;
+  }
+
+}
+
+.tools {
+
+  &__title {
+    margin-bottom: 55px;
+  }
+
+  &__list {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(5, 1fr);
+
+  }
+
+  &__tool {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  &__image {}
+
+  &__description {
+    text-align: center;
+    font-size: 15px;
+    line-height: 33px;
+    color: #2D0027;
+    opacity: 0.5;
+  }
+
+  &__line {
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    bottom: -6%;
+    left: 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 69.27%);
+    border: none;
+  }
+
+  &__line:before {
+    content: '';
+    position: absolute;
+    top: 39%;
+    left: 49.5%;
+    width: 12px;
+    height: 12px;
+    border-left: 2.5px solid #A0148E;
+    border-top: 2.5px solid #A0148E;
+    transform: rotate(225deg);
+
+  }
+
+  &__dots {
+    position: absolute;
+    bottom: -15%;
+  }
+
+  &__dot {
+    background: #A0148E;
+    opacity: 0.15;
+  }
+
+  &__dot-active {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+  }
+
+  &__button-left,
+  &__button-right {
+    bottom: 65%;
   }
 }

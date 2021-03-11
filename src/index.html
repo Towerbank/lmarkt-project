@@ -1,5 +1,22 @@
 {% extends "templates/default.html" %}
 {% set title = "Главная" %}
+{% from 'includes/marcos.html' import card, products %}
+
+{% set items = [
+{ src:'classic', subtitle:'Классические гитары' },
+{ src:'synthes', subtitle:"Синтезаторы" },
+{ src:'electro', subtitle:"Электрогитары" },
+{ src:'powerer', subtitle:"Усилители" }
+] %}
+
+{% set goods = [
+{ src:'classic_gutair', description:'011C Гитара<br> классическая 4/4, Doff'},
+{ src:'classic_gutair2', description:'011C Гитара<br>
+классическая 4/4, Doff' },
+{ src:'table', description:'185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...' },
+{ src:'dig_piano', description:'438PIA0703 Stage Studio
+Цифровое пианино, черное' }
+] %}
 
 {% block content %}
 
@@ -17,10 +34,8 @@
           <span class='preview__old-price'>16 350 ₽</span>
         </div>
       </div>
-      <div class='buttons-scroll preview__buttons-scroll'>
-        <button class='button-left preview__button-left'></button>
-        <button class='button-right preview__button-right'></button>
-      </div>
+      <button class='button-left preview__button-left'></button>
+      <button class='button-right preview__button-right'></button>
       <div class="dots preview__dots">
         <button class='dot preview__dot preview__dot-active'></button>
         <button class='dot preview__dot'></button>
@@ -34,7 +49,10 @@
       <div class='container'>
         <h2 class='categories__title title-h2'>популярные категории</h2>
         <div class='categories__block'>
-          <div class='categories__item'>
+          {% for item in items %}
+          {{ card(item.src, item.subtitle) }}
+          {% endfor %}
+          <!-- <div class='categories__item'>
             <img class='categories__image' src="/img/classic.jpg" alt="">
             <h3 class='categories__subtitle'>Классические гитары</h3>
           </div>
@@ -49,29 +67,103 @@
           <div class='categories__item'>
             <img class='categories__image' src="/img/powerer.jpg" alt="">
             <h3 class='categories__subtitle'>Усилители</h3>
-          </div>
-          <div class='buttons-scroll categories__buttons-scroll'>
-            <button class='button-left categories__button-left'></button>
-            <button class='button-right categories__button-right'></button>
-          </div>
+          </div> -->
+          <button class='button-left categories__button-left'></button>
+          <button class='button-right categories__button-right'></button>
           <div class="dots categories__dots">
-            <button class='dot categories__dot categories__dot-active'></button>
-            <button class='dot categories__dot'></button>
-            <button class='dot categories__dot'></button>
-            <button class='dot categories__dot'></button>
-            <button class='dot categories__dot'></button>
+            <button class='dot products__dot products__dot-active'></button>
+            <button class='dot products__dot'></button>
+            <button class='dot products__dot'></button>
+            <button class='dot products__dot'></button>
+            <button class='dot products__dot'></button>
           </div>
         </div>
       </div>
     </section>
 
-
-
-
-
     <section class='products'>
       <div class='container'>
         <h2 class='product__title title-h2'>популярные товары</h2>
+        <div class='products__list'>
+          {% for good in goods %}
+          {{ products(good.src, good.description) }}
+          {% endfor %}
+          <!-- <div class='products__item'>
+            <div class='products__points'>
+              <a href="#"><img src="img/heart.svg" alt=""></a>
+              <a href="#"><img src="img/compare.svg" alt=""></a>
+            </div>
+            <div class='products__img-text'>
+              <a href="#"><img class='products__image' src="/img/classic_gutair.png" alt="">
+                <p class='products__subtitle'>011C Гитара<br> классическая 4/4, Doff</p>
+              </a>
+            </div>
+            <div class='products__price-pic'>
+              <span class='products__price'>15980 ₽</span>
+              <img class='products__pic' src="img/basket.svg" alt="">
+            </div>
+          </div>
+
+          <div class='products__item'>
+            <div class='products__points'>
+              <a href="#"><img src="img/heart.svg" alt=""></a>
+              <a href="#"><img src="img/compare.svg" alt=""></a>
+            </div>
+            <div class='products__img-text'>
+              <a href="#">
+                <img class='products__image' src="/img/classic_gutair2.png" alt="">
+                <p class='products__subtitle'>011C Гитара<br>
+                  классическая 4/4, Doff</p>
+              </a>
+            </div>
+            <div class='products__price-pic'>
+              <span class='products__price'>15980 ₽</span>
+              <img class='products__pic' src="img/basket.svg" alt="">
+            </div>
+          </div>
+
+          <div class='products__item'>
+            <div class='products__points'>
+              <a href="#"><img src="img/heart.svg" alt=""></a>
+              <a href="#"><img src="img/compare.svg" alt=""></a>
+            </div>
+            <div class='products__img-text'>
+              <a href="#">
+                <img class='products__image' src="/img/table.png" alt="">
+                <p class='products__subtitle'>185-STAY 1100/02 Slim<br> Стойка-колонна для клавиш...</p>
+              </a>
+            </div>
+            <div class='products__price-pic'>
+              <span class='products__price'>15980 ₽</span>
+              <img class='products__pic' src="img/basket.svg" alt="">
+            </div>
+          </div>
+
+          <div class='products__item'>
+            <div class='products__points'>
+              <a href="#"><img src="img/heart.svg" alt=""></a>
+              <a href="#"><img src="img/compare.svg" alt=""></a>
+            </div>
+            <div class='products__img-text'>
+              <img class='products__image' src="img/dig_piano.png" alt="">
+              <p class='products__subtitle'>438PIA0703 Stage Studio
+                Цифровое пианино, черное</p>
+            </div>>
+            <div class='products__price-pic'>
+              <span class='products__price'>15980 ₽</span>
+              <img class='products__pic' src="/img/basket.svg" alt="">
+            </div>
+          </div> -->
+          <button class='button-left products__button-left'></button>
+          <button class='button-right products__button-right'></button>
+          <div class="dots products__dots">
+            <button class='dot products__dot products__dot-active'></button>
+            <button class='dot products__dot'></button>
+            <button class='dot products__dot'></button>
+            <button class='dot products__dot'></button>
+            <button class='dot products__dot'></button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -79,6 +171,84 @@
     <section class='tools'>
       <div class='container'>
         <h2 class='tools__title title-h2'>инструменты по видам</h2>
+        <div class='tools__list'>
+
+          <div class='tools__tool'>
+            <img class='tools__image' src="img/string.svg" alt="">
+            <h2 class='tools__subtitle'>Струнные</h2>
+            <p class='tools__description'>
+              Классические гитары <br>
+              Акустические гитары <br>
+              Акустические бас-гитары<br>
+              Электрогитары <br>
+              Бас-гитары <br>
+              Укулеле</p>
+          </div>
+
+          <div class='tools__tool'>
+            <img class='tools__image' src="img/keyboards.svg" alt="">
+            <h2 class='tools__subtitle'>Клавишные</h2>
+            <p class='tools__description'>
+              Синтезаторы<br>
+              Цифровые пианино<br>
+              Цифровые органы<br>
+              Акустические клавишные <br>
+              инструменты<br>
+              MIDI-клавиатуры
+            </p>
+          </div>
+
+          <div class='tools__tool'>
+            <img class='tools__image' src="img/drums.svg" alt="">
+            <h2 class='tools__subtitle'>Ударные</h2>
+            <p class='tools__description'>
+              Акустические ударные<br>
+              Электронные ударные<br>
+              Тарелки<br>
+              Стойки<br>
+              Рамы<br>
+              Педали
+            </p>
+          </div>
+
+          <div class='tools__tool'>
+            <img class='tools__image' src="img/winds.svg" alt="">
+            <h2 class='tools__subtitle'>Духовые</h2>
+            <p class='tools__description'>
+              Блок-флейты<br>
+              Флейты<br>
+              Саксофоны<br>
+              Кларнеты<br>
+              Трубы<br>
+              Тромбоны
+            </p>
+          </div>
+
+          <div class='tools__tool'>
+            <img class='tools__image' src="img/reeds.svg" alt="">
+            <h2 class='tools__subtitle'>Язычковые</h2>
+            <p class='tools__description'>
+              Блок-флейты<br>
+              Флейты<br>
+              Саксофоны<br>
+              Кларнеты<br>
+              Трубы<br>
+              <br>
+            </p>
+          </div>
+
+          <button class='tools__line'></button>
+          <button class='button-left tools__button-left'></button>
+          <button class='button-right tools__button-right'></button>
+          <div class="dots tools__dots">
+            <button class='dot tools__dot tools__dot-active'></button>
+            <button class='dot tools__dot'></button>
+            <button class='dot tools__dot'></button>
+            <button class='dot tools__dot'></button>
+            <button class='dot tools__dot'></button>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -91,6 +261,7 @@
     <section class='brands'>
       <div class='container'>
         <h2 class='brands__title title-h2'>популярные бренды</h2>
+
       </div>
     </section>
   </div>

@@ -140,11 +140,11 @@
     font-size: 15px;
     cursor: pointer;
     padding-left: 25px;
-    background: url('/img/catalog.svg') no-repeat 20% 50% #A0148E;
+    background: url('../img/catalog.svg') no-repeat 20% 50% #A0148E;
   }
 
   &__catalog:hover {
-    background: url('/img/catalog.svg') no-repeat 20% 50% #D866C9;
+    background: url('../img/catalog.svg') no-repeat 20% 50% #D866C9;
   }
 
   &__search-form {
@@ -242,7 +242,7 @@
   &__amount {
     position: absolute;
     color: #FFFFFF;
-    background: url('/img/Ellipse.svg') no-repeat 50% 30%;
+    background: url('../img/Ellipse.svg') no-repeat 50% 30%;
     top: 7%;
     left: 37%;
     font-size: 9px;

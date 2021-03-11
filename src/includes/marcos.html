@@ -54,3 +54,13 @@
   </div>
 </div>
 {% endmacro %}
+
+{% macro sorts(src, subtitle, description) %}
+<div class='tools__tool'>
+  <img class='tools__image' src="img/{{src}}.svg" alt="">
+  <h2 class='tools__subtitle'>{{subtitle}}</h2>
+  <p class='tools__description'>
+    {{description|safe}}
+  </p>
+</div>
+{% endmacro %}

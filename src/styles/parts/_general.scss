@@ -212,7 +212,6 @@ body {
   &__subtitle {
     position: absolute;
     top: 63%;
-    align-items: center;
     text-align: center;
     width: 100%;
     color: #FFFFFF;
@@ -264,6 +263,15 @@ body {
     justify-content: flex-end;
   }
 
+  &__item:nth-of-type(2) {
+    justify-content: flex-start;
+  }
+
+  &__item:nth-of-type(3),
+  &__item:nth-of-type(4) {
+    justify-content: center;
+  }
+
   &__points {
     position: absolute;
     display: flex;
@@ -274,15 +282,16 @@ body {
     opacity: 0.3;
   }
 
-
-  // &__item:nth-child(2) &__image {}
+  &__img-text {
+    text-align: center;
+  }
 
   &__subtitle {
     text-align: center;
     font-size: 15px;
     font-weight: bold;
-    align-items: center;
     color: #2D0027;
+    width: 250px;
   }
 
   &__price-pic {
@@ -292,19 +301,21 @@ body {
 
   &__price {
     position: relative;
-    text-align: center;
     background: #FFF8FE;
     border-radius: 2px;
-    padding: 15px 20px 15px 20px;
-    align-items: center;
+    padding-top: 3px;
     text-align: center;
     color: #2D0027;
+    line-height: 40px;
     font-size: 15px;
     font-weight: bold;
+    width: 88px;
+    height: 45px;
   }
 
   &__item:first-of-type &__price {
     color: #A0148E;
+    line-height: 30px;
   }
 
   &__item:first-of-type &__price::before {
@@ -314,14 +325,19 @@ body {
     font-size: 11px;
     color: #2D0027;
     opacity: 0.3;
-    bottom: 10%;
+    bottom: -5%;
     left: 27%;
+    text-decoration: line-through;
   }
 
   &__pic {
     padding: 10px;
     border: 3px solid #F7ECF5;
     border-radius: 2px;
+  }
+
+  &__link {
+    text-decoration: none;
   }
 
   &__dots {

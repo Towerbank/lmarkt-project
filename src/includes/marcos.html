@@ -1,6 +1,6 @@
 {% macro card(src, subtitle) %}
 <div class="categories__item">
-  <a href="">
+  <a href="#">
     <picture>
       <source type="image/webp" srcset="img/{{src}}.webp">
       <img class="categories__img" src="img/{{src}}.jpg" alt="">
@@ -38,13 +38,13 @@
     <a href="#"><img src="img/compare.svg" alt=""></a>
   </div>
   <div class='products__img-text'>
-    <a href="#">
+    <a class='products__link' href="#">
       <picture>
         <source type="image/webp" srcset="img/{{src}}.webp">
         <img class='products__image' src="img/{{src}}.png" alt="">
       </picture>
     </a>
-    <a href="#">
+    <a class='products__link' href="#">
       <p class='products__subtitle'>{{ description|safe }}</p>
     </a>
   </div>

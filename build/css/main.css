@@ -148,7 +148,6 @@ body {
   .categories__subtitle {
     position: absolute;
     top: 63%;
-    align-items: center;
     text-align: center;
     width: 100%;
     color: #FFFFFF;
@@ -184,6 +183,10 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end; }
+  .products__item:nth-of-type(2) {
+    justify-content: flex-start; }
+  .products__item:nth-of-type(3), .products__item:nth-of-type(4) {
+    justify-content: center; }
   .products__points {
     position: absolute;
     display: flex;
@@ -192,28 +195,32 @@ body {
     top: 4%;
     right: 8%;
     opacity: 0.3; }
+  .products__img-text {
+    text-align: center; }
   .products__subtitle {
     text-align: center;
     font-size: 15px;
     font-weight: bold;
-    align-items: center;
-    color: #2D0027; }
+    color: #2D0027;
+    width: 250px; }
   .products__price-pic {
     display: flex;
     gap: 10px; }
   .products__price {
     position: relative;
-    text-align: center;
     background: #FFF8FE;
     border-radius: 2px;
-    padding: 15px 20px 15px 20px;
-    align-items: center;
+    padding-top: 3px;
     text-align: center;
     color: #2D0027;
+    line-height: 40px;
     font-size: 15px;
-    font-weight: bold; }
+    font-weight: bold;
+    width: 88px;
+    height: 45px; }
   .products__item:first-of-type .products__price {
-    color: #A0148E; }
+    color: #A0148E;
+    line-height: 30px; }
   .products__item:first-of-type .products__price::before {
     content: '18980 ₽';
     position: absolute;
@@ -221,12 +228,15 @@ body {
     font-size: 11px;
     color: #2D0027;
     opacity: 0.3;
-    bottom: 10%;
-    left: 27%; }
+    bottom: -5%;
+    left: 27%;
+    text-decoration: line-through; }
   .products__pic {
     padding: 10px;
     border: 3px solid #F7ECF5;
     border-radius: 2px; }
+  .products__link {
+    text-decoration: none; }
   .products__dots {
     position: absolute;
     bottom: -10%; }

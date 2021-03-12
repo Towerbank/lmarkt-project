@@ -340,6 +340,18 @@ body {
   font-size: 60px;
   margin-top: -120px; }
 
+.brands {
+  margin-bottom: 90px; }
+  .brands__table {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    align-items: center;
+    row-gap: 20px; }
+
 .header {
   margin-bottom: 20px;
   margin-top: -10px; }
@@ -511,3 +523,84 @@ body {
     font-size: 9px;
     font-weight: bold;
     width: 14px; }
+
+.footer {
+  background-color: #FFF8FE; }
+  .footer__content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 44px;
+    padding-right: 90px;
+    gap: 80px; }
+  .footer__table {
+    display: flex;
+    justify-content: space-between; }
+  .footer__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px; }
+  .footer__item {
+    color: #2D0027;
+    opacity: 0.5;
+    font-size: 15px; }
+  .footer__list .footer__item:first-child {
+    font-size: 22px;
+    font-weight: bold;
+    padding-bottom: 10px; }
+  .footer__link {
+    text-decoration: none;
+    color: #2D0027; }
+  .footer__bottom {
+    display: flex;
+    justify-content: space-between; }
+  .footer__copyright {
+    font-size: 15px;
+    color: #2D0027;
+    opacity: 0.3; }
+  .footer__social-number {
+    display: flex;
+    gap: 160px; }
+  .footer__social {
+    display: flex;
+    gap: 10px;
+    align-items: center; }
+  .footer__icon-vk {
+    opacity: 0.3;
+    background: url("../img/vk.svg") no-repeat;
+    width: 25px;
+    height: 14px; }
+  .footer__icon-vk:hover {
+    opacity: 1;
+    background: url("../img/vk-2.svg") no-repeat; }
+  .footer__icon-fb {
+    opacity: 0.3;
+    background: url("../img/fb.svg") no-repeat;
+    width: 20px;
+    height: 18px; }
+  .footer__icon-fb:hover {
+    opacity: 1;
+    background: url("../img/fb-2.svg") no-repeat; }
+  .footer__icon-inst {
+    opacity: 0.3;
+    background: url("../img/inst.svg") no-repeat;
+    width: 20px;
+    height: 18px; }
+  .footer__icon-inst:hover {
+    opacity: 1;
+    background: url("../img/inst-2.svg") no-repeat; }
+  .footer__icon-tg {
+    opacity: 0.3;
+    background: url("../img/tg.svg") no-repeat;
+    width: 22px;
+    height: 17px; }
+  .footer__icon-tg:hover {
+    opacity: 1;
+    background: url("../img/tg-2.svg") no-repeat; }
+  .footer__number {
+    font-size: 22px;
+    font-weight: bold;
+    color: #2D0027;
+    opacity: 0.5; }

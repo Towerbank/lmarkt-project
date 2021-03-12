@@ -486,3 +486,18 @@ body {
   }
 
 }
+
+.brands {
+  margin-bottom: 90px;
+
+  &__table {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    text-align: center;
+    align-items: center;
+    row-gap: 20px;
+  }
+}

@@ -15,7 +15,8 @@ body {
 
 // Общие Элементы/блоки 
 
-// Навигационные точки 
+// Навигационные точки
+
 .dots {
   display: flex;
   align-items: center;
@@ -367,8 +368,6 @@ body {
     align-items: center;
   }
 
-  &__image {}
-
   &__description {
     text-align: center;
     font-size: 15px;
@@ -424,6 +423,7 @@ body {
 }
 
 .preview-down {
+  margin-bottom: 60px;
 
   &__list {
     display: grid;
@@ -487,8 +487,13 @@ body {
 
 }
 
+
 .brands {
   margin-bottom: 90px;
+
+  &__title {
+    margin-bottom: 40px;
+  }
 
   &__table {
     margin: 0;
@@ -499,5 +504,11 @@ body {
     text-align: center;
     align-items: center;
     row-gap: 20px;
+  }
+
+  &__subtitle {
+    font-weight: bold;
+    font-size: 15px;
+    color: #2D0027;
   }
 }

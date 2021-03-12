@@ -291,57 +291,53 @@ body {
   .tools__button-left, .tools__button-right {
     bottom: 65%; }
 
-.preview-down__list {
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr;
-  column-gap: 27px; }
-
-.preview-down__item {
-  position: relative; }
-
-.preview-down__image {
-  border-radius: 3px; }
-
-.preview-down__description {
-  position: absolute;
-  top: 4%;
-  left: 12%;
-  color: #ffffff;
-  font-family: "Exo 2", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  height: 85%; }
-
-.preview-down__title {
-  font-size: 20px;
-  text-transform: uppercase; }
-
-.preview-down__subtitle {
-  margin-top: -160px;
-  font-size: 30px;
-  text-transform: uppercase;
-  text-align: center; }
-
-.preview-down__price {
-  background-color: #ffffff;
-  border-radius: 2px;
-  color: #A0148E;
-  padding: 5px 13px 7px 12px;
-  font-size: 30px;
-  font-weight: bold; }
-
-.preview-down__item:nth-of-type(2) .preview-down__title {
-  font-size: 30px;
-  margin: 25px; }
-
-.preview-down__item:nth-of-type(2) .preview-down__subtitle {
-  font-size: 60px;
-  margin-top: -120px; }
+.preview-down {
+  margin-bottom: 60px; }
+  .preview-down__list {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    column-gap: 27px; }
+  .preview-down__item {
+    position: relative; }
+  .preview-down__image {
+    border-radius: 3px; }
+  .preview-down__description {
+    position: absolute;
+    top: 4%;
+    left: 12%;
+    color: #ffffff;
+    font-family: "Exo 2", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 85%; }
+  .preview-down__title {
+    font-size: 20px;
+    text-transform: uppercase; }
+  .preview-down__subtitle {
+    margin-top: -160px;
+    font-size: 30px;
+    text-transform: uppercase;
+    text-align: center; }
+  .preview-down__price {
+    background-color: #ffffff;
+    border-radius: 2px;
+    color: #A0148E;
+    padding: 5px 13px 7px 12px;
+    font-size: 30px;
+    font-weight: bold; }
+  .preview-down__item:nth-of-type(2) .preview-down__title {
+    font-size: 30px;
+    margin: 25px; }
+  .preview-down__item:nth-of-type(2) .preview-down__subtitle {
+    font-size: 60px;
+    margin-top: -120px; }
 
 .brands {
   margin-bottom: 90px; }
+  .brands__title {
+    margin-bottom: 40px; }
   .brands__table {
     margin: 0;
     padding: 0;
@@ -351,6 +347,10 @@ body {
     text-align: center;
     align-items: center;
     row-gap: 20px; }
+  .brands__subtitle {
+    font-weight: bold;
+    font-size: 15px;
+    color: #2D0027; }
 
 .header {
   margin-bottom: 20px;
@@ -531,7 +531,8 @@ body {
     flex-direction: column;
     padding-top: 44px;
     padding-right: 90px;
-    gap: 80px; }
+    gap: 80px;
+    padding-bottom: 40px; }
   .footer__table {
     display: flex;
     justify-content: space-between; }

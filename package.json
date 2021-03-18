@@ -24,6 +24,7 @@
     "gulp-webp": "^4.0.1"
   },
   "dependencies": {
+    "@glidejs/glide": "^3.4.1",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0"
   }

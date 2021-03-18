@@ -91,27 +91,101 @@
 <main>
   <div class='container'>
     <section class="preview">
-      <div class='preview__gradient'>
-        <img class='preview__image' src="img/preview.jpg" alt="">
-      </div>
-      <div class='preview__description'>
-        <h4 class='preview__title'>акустическая гитара</h4>
-        <p class='preview__subtitle'>ad810-bks <br> standard series</p>
-        <div class='preview__price'>
-          <span class='preview__new-price'>12 350 ₽</span>
-          <span class='preview__old-price'>16 350 ₽</span>
+
+      <div class="slider">
+        <div class="slider__track" data-glide-el="track">
+          <div class="slider__item">
+            <div class='preview__gradient'>
+              <img class='preview__image' src="img/preview.jpg" alt="">
+            </div>
+            <div class='preview__description'>
+              <h4 class='preview__title'>акустическая гитара</h4>
+              <p class='preview__subtitle'>ad810-bks <br> standard series</p>
+              <div class='preview__price'>
+                <span class='preview__new-price'>12 350 ₽</span>
+                <span class='preview__old-price'>16 350 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class='preview__gradient'>
+              <img class='preview__image' src="img/preview.jpg" alt="">
+            </div>
+            <div class='preview__description'>
+              <h4 class='preview__title'>акустическая гитара</h4>
+              <p class='preview__subtitle'>ad810-bks <br> standard series</p>
+              <div class='preview__price'>
+                <span class='preview__new-price'>12 350 ₽</span>
+                <span class='preview__old-price'>16 350 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class='preview__gradient'>
+              <img class='preview__image' src="img/preview.jpg" alt="">
+            </div>
+            <div class='preview__description'>
+              <h4 class='preview__title'>акустическая гитара</h4>
+              <p class='preview__subtitle'>ad810-bks <br> standard series</p>
+              <div class='preview__price'>
+                <span class='preview__new-price'>12 350 ₽</span>
+                <span class='preview__old-price'>16 350 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider__arrows">
+          <button class=" btn__left button-left preview__button-left "></button>
+          <button class=" btn__right button-right preview__button-right"></button>
+        </div>
+        <div class="dots slider__dots preview__dots" data-glide-el="controls[nav]">
+          <button class='slider__dot' data-glide-dir="=0"></button>
+          <button class='slider__dot' data-glide-dir="=1"></button>
+          <button class='slider__dot' data-glide-dir="=2"></button>
+          <button class='slider__dot' data-glide-dir="=3"></button>
+          <button class='slider__dot' data-glide-dir="=4"></button>
         </div>
       </div>
-      <button class='button-left preview__button-left'></button>
-      <button class='button-right preview__button-right'></button>
 
-      <div class="dots preview__dots">
-        <button class='dot preview__dot preview__dot-active'></button>
-        <button class='dot preview__dot'></button>
-        <button class='dot preview__dot'></button>
-        <button class='dot preview__dot'></button>
-        <button class='dot preview__dot'></button>
-      </div>
+      <!-- <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides" style='list-style:none'>
+            <li class="glide__slide">
+              <div class='preview__gradient'>
+                <img class='preview__image' src="img/preview.jpg" alt="">
+              </div>
+              <div class='preview__description'>
+                <h4 class='preview__title'>акустическая гитара</h4>
+                <p class='preview__subtitle'>ad810-bks <br> standard series</p>
+                <div class='preview__price'>
+                  <span class='preview__new-price'>12 350 ₽</span>
+                  <span class='preview__old-price'>16 350 ₽</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="glide__arrows" data-glide-el="controls">
+          <button class=" button-left preview__button-left glide__arrow glide__arrow--left" data-glide-dir="<"></button>
+          <button class=" button-right preview__button-right glide__arrow glide__arrow--right"
+            data-glide-dir=">"></button>
+        </div>
+        <div class="dots glide__dots preview__dots" data-glide-el="controls[nav]">
+          <button class='dot preview__dot glide__dot' data-glide-dir="=0"></button>
+          <button class='dot preview__dot glide__dot' data-glide-dir="=1"></button>
+          <button class='dot preview__dot glide__dot' data-glide-dir="=2"></button>
+          <button class='dot preview__dot glide__dot' data-glide-dir="=3"></button>
+          <button class='dot preview__dot glide__dot' data-glide-dir="=4"></button>
+        </div>
+      </div> -->
+      <!-- 
+      <div class="dots preview__dots" data-glide-el="controls[nav]>
+        <button class='dot preview__dot' data-glide-dir="=0"></button>
+        <button class='dot preview__dot' data-glide-dir="=1"></button>
+        <button class='dot preview__dot' data-glide-dir="=2"></button>
+        <button class='dot preview__dot' data-glide-dir="=3"></button>
+        <button class='dot preview__dot' data-glide-dir="=4"></button>
+      </div> -->
     </section>
 
     <section class='categories'>
@@ -511,6 +585,9 @@ MIDI-клавиатуры
 </footer>
   <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@700&family=Open+Sans:wght@400;700&display=swap"
     rel="stylesheet">
+
+  <script src='script.js'></script>
 </body>
+
 
 </html>

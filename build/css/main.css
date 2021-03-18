@@ -9,6 +9,19 @@ body {
   max-width: 1210px;
   margin: 0 auto; }
 
+.slider {
+  overflow: hidden;
+  background-color: #fff;
+  position: relative; }
+
+.slider__track {
+  display: flex;
+  transition: .5s; }
+
+.slider__item {
+  height: 100%;
+  position: relative; }
+
 .dots {
   display: flex;
   align-items: center;
@@ -69,7 +82,6 @@ body {
   color: #2D0027; }
 
 .preview {
-  position: relative;
   margin-bottom: 52px; }
   .preview__image {
     border-radius: 3px; }

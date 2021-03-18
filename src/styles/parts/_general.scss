@@ -15,6 +15,27 @@ body {
 
 // Общие Элементы/блоки 
 
+// Слайдер 
+
+.slider {
+  overflow: hidden;
+  background-color: #fff;
+  position: relative;
+}
+
+.slider__track {
+
+  display: flex;
+  transition: .5s;
+}
+
+.slider__item {
+  height: 100%;
+  position: relative;
+}
+
+
+
 // Навигационные точки
 
 .dots {
@@ -42,14 +63,6 @@ body {
 }
 
 // Кнопки Лево-Право 
-
-// .buttons-scroll {
-//   position: absolute;
-//   width: 100.5%;
-//   left: -3px;
-//   display: flex;
-//   justify-content: space-between;
-// }
 
 .button-left,
 .button-right {
@@ -99,7 +112,6 @@ body {
 
 
 .preview {
-  position: relative;
   margin-bottom: 52px;
 
   &__image {

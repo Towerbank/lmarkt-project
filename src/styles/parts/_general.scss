@@ -38,7 +38,7 @@ body {
 
 // Навигационные точки
 
-.dots {
+.slider__dots {
   display: flex;
   align-items: center;
   gap: 11px;
@@ -46,7 +46,7 @@ body {
   height: 16px;
 }
 
-.dot {
+.slider__dot {
   width: 10px;
   height: 10px;
   padding: 1px;
@@ -56,7 +56,7 @@ body {
   cursor: pointer;
 }
 
-.dot:focus {
+.slider__dot:focus {
   width: 13px;
   height: 13px;
   opacity: 1;
@@ -242,7 +242,7 @@ body {
     opacity: 0.15;
   }
 
-  &__dot-active {
+  &__dot:focus {
     width: 13px;
     height: 13px;
     opacity: 1;

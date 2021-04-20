@@ -4,13 +4,10 @@
 
   &__up {
     display: flex;
-    justify-content: space-between;
-  }
 
-  &__location-nav {
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    column-gap: 325px;
+    @include media-down(md) {
+      display: none;
+    }
   }
 
   &__location {
@@ -33,12 +30,16 @@
     position: absolute;
     content: '';
     top: 30%;
-    left: 83%;
+    left: 95%;
     width: 4px;
     height: 4px;
     border-top: 1.5px solid #A0148E;
     border-right: 1.5px solid #A0148E;
     transform: rotate(135deg);
+  }
+
+  &__nav {
+    margin-left: auto;
   }
 
   &__list {
@@ -47,6 +48,7 @@
     list-style: none;
     gap: 35px;
     font-size: 15px;
+
   }
 
   &__link {
@@ -64,6 +66,7 @@
     display: flex;
     gap: 10px;
     align-items: center;
+    margin-left: 50px;
   }
 
   &__icon-vk {
@@ -118,6 +121,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media-down(md) {
+      flex-wrap: wrap;
+      justify-content: auto;
+      margin-top: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
 
 
@@ -129,6 +140,19 @@
     font-size: 24px;
     font-family: 'Exo 2', sans-serif;
 
+    @include media-down(md) {
+      order: 2;
+      width: 100%;
+    }
+  }
+
+  &__location-city {
+    display: none;
+
+    @include media-down(md) {
+      display: block;
+      margin-left: auto;
+    }
   }
 
   &__catalog {
@@ -143,6 +167,10 @@
     cursor: pointer;
     padding-left: 25px;
     background: url('../img/catalog.svg') no-repeat 20% 50% #A0148E;
+
+    @include media-down(md) {
+      display: none;
+    }
   }
 
   &__catalog:hover {
@@ -150,7 +178,7 @@
   }
 
   &__search-form {
-    width: 362px;
+    width: 100%;
     height: 45px;
     font-size: 15px;
     padding-left: 19px;
@@ -163,6 +191,12 @@
 
   &__search {
     position: relative;
+    width: 362px;
+
+    @include media-down(md) {
+      order: 3;
+      width: 100%;
+    }
   }
 
   &__search-form::placeholder {
@@ -190,6 +224,9 @@
     color: #2D0027;
     font-family: 'Exo 2', sans-serif;
 
+    @include media-down(md) {
+      display: none;
+    }
   }
 
   &__telephone {
@@ -197,27 +234,36 @@
   }
 
   &__menu {
-    display: flex;
-    gap: 30px;
+    max-width: 283px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 30px;
     align-items: flex-end;
     text-align: center;
+
+    @include media-down(md) {
+      order: 0;
+      min-width: 100%;
+
+    }
   }
 
   &__point {
     height: 45px;
+
   }
 
   &__menu-link {
     text-decoration: none;
-
   }
 
   &__menu-link:hover {
-    opacity: 0.6;
+    color: #D866C9;
   }
 
   &__icon {
     margin-bottom: -10px;
+    fill: currentColor;
   }
 
 
@@ -250,5 +296,21 @@
     font-size: 9px;
     font-weight: bold;
     width: 14px;
+  }
+
+  &__point-call,
+  &__point-menu {
+    display: none;
+
+    @include media-down(md) {
+      display: block;
+    }
+  }
+
+  &__point-1,
+  &__point-2 {
+    @include media-down(md) {
+      display: none;
+    }
   }
 }

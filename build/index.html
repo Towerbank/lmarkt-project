@@ -12,25 +12,24 @@
   <header class="header">
   <div class='container'>
     <div class='header__up'>
-      <div class='header__location-nav'>
-        <button class='header__location'>Москва</button>
-        <nav class='header__nav'>
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="#" class="header__link">Пункты выдачи и постаматы</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">О маркетплейсе</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Где мой заказ?</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <button class='header__location'>Москва</button>
+
+      <nav class='header__nav'>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Пункты выдачи и постаматы</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">О маркетплейсе</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Где мой заказ?</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
 
       <div class='header__social'>
         <a href="#" class="header__social-icon header__icon-vk"></a>
@@ -40,11 +39,11 @@
       </div>
 
     </div>
-
     <div class="header__down">
       <div class="header__logo">
         <img src="img/lmarkt.svg" alt="">
         <p>lmarkt</p>
+        <button class='header__location header__location-city'>Москва</button>
       </div>
       <button class='header__catalog'>Каталог</button>
       <form action="" method="post" class='header__search'>
@@ -57,19 +56,32 @@
         <p class='header__telephone'>8 800 611 00 97</p>
       </div>
       <div class='header__menu'>
-        <div class='header__point'>
+        <div class='header__point header__point-menu'>
+          <a href="#" class='header__menu-link'>
+            <img src="img/menu2.svg" alt="" class='header__icon'>
+            <p class='header__subtitle'>Меню</p>
+          </a>
+        </div>
+        <div class='header__point header__point-call'>
+          <a href="#" class='header__menu-link'>
+            <img src="img/callMe.svg" alt="" class='header__icon'>
+            <p class='header__subtitle'>Позвонить нам</p>
+          </a>
+        </div>
+
+        <div class='header__point header__point-1'>
           <a href="#" class='header__menu-link'>
             <img src="img/heart.svg" alt="" class='header__icon'>
             <p class='header__subtitle'>Избранное</p>
           </a>
         </div>
-        <div class='header__point'>
+        <div class='header__point header__point-2'>
           <a href="#" class='header__menu-link'>
             <img src="img/compare.svg" alt="" class='header__icon'>
             <p class='header__subtitle'>Сравнение</p>
           </a>
         </div>
-        <div class='header__point'>
+        <div class='header__point header__point-3'>
           <a href="#" class='header__menu-link'>
             <img src="img/profile.svg" alt="" class='header__icon'>
             <p class='header__subtitle'>Профиль</p>
@@ -133,17 +145,43 @@
               </div>
             </div>
           </div>
+          <div class="slider__item">
+            <div class='preview__gradient'>
+              <img class='preview__image' src="img/preview.jpg" alt="">
+            </div>
+            <div class='preview__description'>
+              <h4 class='preview__title'>акустическая гитара</h4>
+              <p class='preview__subtitle'>ad810-bks <br> standard series</p>
+              <div class='preview__price'>
+                <span class='preview__new-price'>12 350 ₽</span>
+                <span class='preview__old-price'>16 350 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="slider__item">
+            <div class='preview__gradient'>
+              <img class='preview__image' src="img/preview.jpg" alt="">
+            </div>
+            <div class='preview__description'>
+              <h4 class='preview__title'>акустическая гитара</h4>
+              <p class='preview__subtitle'>ad810-bks <br> standard series</p>
+              <div class='preview__price'>
+                <span class='preview__new-price'>12 350 ₽</span>
+                <span class='preview__old-price'>16 350 ₽</span>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="slider__arrows">
           <button class=" btn__left button-left preview__button-left "></button>
           <button class=" btn__right button-right preview__button-right"></button>
         </div>
         <div class="dots slider__dots preview__dots" data-glide-el="controls[nav]">
-          <button class='slider__dot' data-glide-dir="=0"></button>
-          <button class='slider__dot' data-glide-dir="=1"></button>
-          <button class='slider__dot' data-glide-dir="=2"></button>
-          <button class='slider__dot' data-glide-dir="=3"></button>
-          <button class='slider__dot' data-glide-dir="=4"></button>
+          <button class='slider__dot preview__dot' data-glide-dir="=0"></button>
+          <button class='slider__dot preview__dot' data-glide-dir="=1"></button>
+          <button class='slider__dot preview__dot' data-glide-dir="=2"></button>
+          <button class='slider__dot preview__dot' data-glide-dir="=3"></button>
+          <button class='slider__dot preview__dot' data-glide-dir="=4"></button>
         </div>
       </div>
 
@@ -191,9 +229,10 @@
     <section class='categories'>
       <div class='container'>
         <h2 class='categories__title title-h2'>популярные категории</h2>
-        <div class='categories__block'>
-          
-          
+        <div class="slider">
+          <div class='categories__block slider__track'>
+            
+            
 <div class="categories__item">
   <a href="#">
     <picture>
@@ -204,8 +243,8 @@
   </a>
 </div>
 
-          
-          
+            
+            
 <div class="categories__item">
   <a href="#">
     <picture>
@@ -216,8 +255,8 @@
   </a>
 </div>
 
-          
-          
+            
+            
 <div class="categories__item">
   <a href="#">
     <picture>
@@ -228,8 +267,8 @@
   </a>
 </div>
 
-          
-          
+            
+            
 <div class="categories__item">
   <a href="#">
     <picture>
@@ -240,15 +279,16 @@
   </a>
 </div>
 
-          
-          <button class='button-left categories__button-left'></button>
-          <button class='button-right categories__button-right'></button>
-          <div class="dots categories__dots">
-            <button class='dot products__dot products__dot-active'></button>
-            <button class='dot products__dot'></button>
-            <button class='dot products__dot'></button>
-            <button class='dot products__dot'></button>
-            <button class='dot products__dot'></button>
+            
+          </div>
+          <button class='btn__left button-left categories__button-left'></button>
+          <button class='btn__right button-right categories__button-right'></button>
+          <div class="slider__dots categories__dots">
+            <button class='slider__dot products__dot'></button>
+            <button class='slider__dot products__dot'></button>
+            <button class='slider__dot products__dot'></button>
+            <button class='slider__dot products__dot'></button>
+            <button class='slider__dot products__dot'></button>
           </div>
         </div>
       </div>
@@ -358,14 +398,14 @@
 </div>
 
           
-          <button class='button-left products__button-left'></button>
-          <button class='button-right products__button-right'></button>
-          <div class="dots products__dots">
-            <button class='dot products__dot products__dot-active'></button>
-            <button class='dot products__dot'></button>
-            <button class='dot products__dot'></button>
-            <button class='dot products__dot'></button>
-            <button class='dot products__dot'></button>
+          <button class='btn__left button-left products__button-left'></button>
+          <button class='btn__right button-right products__button-right'></button>
+          <div class="slider__dots products__dots">
+            <button class='slider__dot products__dot products__dot-active'></button>
+            <button class='slider__dot products__dot'></button>
+            <button class='slider__dot products__dot'></button>
+            <button class='slider__dot products__dot'></button>
+            <button class='slider__dot products__dot'></button>
           </div>
         </div>
       </div>
@@ -452,14 +492,14 @@ MIDI-клавиатуры
 
           
           <button class='tools__line'></button>
-          <button class='button-left tools__button-left'></button>
-          <button class='button-right tools__button-right'></button>
-          <div class="dots tools__dots">
-            <button class='dot tools__dot tools__dot-active'></button>
-            <button class='dot tools__dot'></button>
-            <button class='dot tools__dot'></button>
-            <button class='dot tools__dot'></button>
-            <button class='dot tools__dot'></button>
+          <button class='btn__left button-left tools__button-left'></button>
+          <button class='btn__right button-right tools__button-right'></button>
+          <div class="slider__dots tools__dots">
+            <button class='slider__dot tools__dot tools__dot-active'></button>
+            <button class='slider__dot tools__dot'></button>
+            <button class='slider__dot tools__dot'></button>
+            <button class='slider__dot tools__dot'></button>
+            <button class='slider__dot tools__dot'></button>
           </div>
         </div>
       </div>

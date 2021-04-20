@@ -22,14 +22,14 @@ body {
   height: 100%;
   position: relative; }
 
-.dots {
+.slider__dots {
   display: flex;
   align-items: center;
   gap: 11px;
   left: 46%;
   height: 16px; }
 
-.dot {
+.slider__dot {
   width: 10px;
   height: 10px;
   padding: 1px;
@@ -38,7 +38,7 @@ body {
   outline: none;
   cursor: pointer; }
 
-.dot:focus {
+.slider__dot:focus {
   width: 13px;
   height: 13px;
   opacity: 1; }
@@ -172,7 +172,7 @@ body {
   .categories__dot {
     background: #A0148E;
     opacity: 0.15; }
-  .categories__dot-active {
+  .categories__dot:focus {
     width: 13px;
     height: 13px;
     opacity: 1; }
@@ -378,12 +378,10 @@ body {
   margin-bottom: 20px;
   margin-top: -10px; }
   .header__up {
-    display: flex;
-    justify-content: space-between; }
-  .header__location-nav {
-    display: grid;
-    grid-template-columns: 70px 1fr;
-    column-gap: 325px; }
+    display: flex; }
+    @media (max-width: 999.98px) {
+      .header__up {
+        display: none; } }
   .header__location {
     position: relative;
     border: none;
@@ -402,12 +400,14 @@ body {
     position: absolute;
     content: '';
     top: 30%;
-    left: 83%;
+    left: 95%;
     width: 4px;
     height: 4px;
     border-top: 1.5px solid #A0148E;
     border-right: 1.5px solid #A0148E;
     transform: rotate(135deg); }
+  .header__nav {
+    margin-left: auto; }
   .header__list {
     display: flex;
     flex-wrap: wrap;
@@ -424,7 +424,8 @@ body {
   .header__social {
     display: flex;
     gap: 10px;
-    align-items: center; }
+    align-items: center;
+    margin-left: 50px; }
   .header__icon-vk {
     opacity: 0.3;
     background: url("../img/vk.svg") no-repeat;
@@ -461,6 +462,13 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center; }
+    @media (max-width: 999.98px) {
+      .header__down {
+        flex-wrap: wrap;
+        justify-content: auto;
+        margin-top: 10px;
+        padding-left: 20px;
+        padding-right: 20px; } }
   .header__logo {
     display: flex;
     gap: 12px;
@@ -468,6 +476,16 @@ body {
     text-transform: uppercase;
     font-size: 24px;
     font-family: 'Exo 2', sans-serif; }
+    @media (max-width: 999.98px) {
+      .header__logo {
+        order: 2;
+        width: 100%; } }
+  .header__location-city {
+    display: none; }
+    @media (max-width: 999.98px) {
+      .header__location-city {
+        display: block;
+        margin-left: auto; } }
   .header__catalog {
     width: 141px;
     height: 45px;
@@ -480,10 +498,13 @@ body {
     cursor: pointer;
     padding-left: 25px;
     background: url("../img/catalog.svg") no-repeat 20% 50% #A0148E; }
+    @media (max-width: 999.98px) {
+      .header__catalog {
+        display: none; } }
   .header__catalog:hover {
     background: url("../img/catalog.svg") no-repeat 20% 50% #D866C9; }
   .header__search-form {
-    width: 362px;
+    width: 100%;
     height: 45px;
     font-size: 15px;
     padding-left: 19px;
@@ -493,7 +514,12 @@ body {
     outline: none;
     opacity: 0.4; }
   .header__search {
-    position: relative; }
+    position: relative;
+    width: 362px; }
+    @media (max-width: 999.98px) {
+      .header__search {
+        order: 3;
+        width: 100%; } }
   .header__search-form::placeholder {
     color: #A0148E;
     opacity: 0.4; }
@@ -510,21 +536,31 @@ body {
     font-size: 24px;
     color: #2D0027;
     font-family: 'Exo 2', sans-serif; }
+    @media (max-width: 999.98px) {
+      .header__number {
+        display: none; } }
   .header__telephone {
     vertical-align: top; }
   .header__menu {
-    display: flex;
-    gap: 30px;
+    max-width: 283px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    column-gap: 30px;
     align-items: flex-end;
     text-align: center; }
+    @media (max-width: 999.98px) {
+      .header__menu {
+        order: 0;
+        min-width: 100%; } }
   .header__point {
     height: 45px; }
   .header__menu-link {
     text-decoration: none; }
   .header__menu-link:hover {
-    opacity: 0.6; }
+    color: #D866C9; }
   .header__icon {
-    margin-bottom: -10px; }
+    margin-bottom: -10px;
+    fill: currentColor; }
   .header__subtitle {
     font-size: 9px;
     color: #A0148E;
@@ -545,6 +581,14 @@ body {
     font-size: 9px;
     font-weight: bold;
     width: 14px; }
+  .header__point-call, .header__point-menu {
+    display: none; }
+    @media (max-width: 999.98px) {
+      .header__point-call, .header__point-menu {
+        display: block; } }
+  @media (max-width: 999.98px) {
+    .header__point-1, .header__point-2 {
+      display: none; } }
 
 .footer {
   background-color: #FFF8FE; }

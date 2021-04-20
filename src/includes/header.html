@@ -1,25 +1,24 @@
 <header class="header">
   <div class='container'>
     <div class='header__up'>
-      <div class='header__location-nav'>
-        <button class='header__location'>Москва</button>
-        <nav class='header__nav'>
-          <ul class="header__list">
-            <li class="header__item">
-              <a href="#" class="header__link">Пункты выдачи и постаматы</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">О маркетплейсе</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Где мой заказ?</a>
-            </li>
-            <li class="header__item">
-              <a href="#" class="header__link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+      <button class='header__location'>Москва</button>
+
+      <nav class='header__nav'>
+        <ul class="header__list">
+          <li class="header__item">
+            <a href="#" class="header__link">Пункты выдачи и постаматы</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">О маркетплейсе</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Где мой заказ?</a>
+          </li>
+          <li class="header__item">
+            <a href="#" class="header__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
 
       <div class='header__social'>
         <a href="#" class="header__social-icon header__icon-vk"></a>
@@ -29,11 +28,11 @@
       </div>
 
     </div>
-
     <div class="header__down">
       <div class="header__logo">
         <img src="img/lmarkt.svg" alt="">
         <p>lmarkt</p>
+        <button class='header__location header__location-city'>Москва</button>
       </div>
       <button class='header__catalog'>Каталог</button>
       <form action="" method="post" class='header__search'>
@@ -46,19 +45,32 @@
         <p class='header__telephone'>8 800 611 00 97</p>
       </div>
       <div class='header__menu'>
-        <div class='header__point'>
+        <div class='header__point header__point-menu'>
+          <a href="#" class='header__menu-link'>
+            <img src="img/menu2.svg" alt="" class='header__icon'>
+            <p class='header__subtitle'>Меню</p>
+          </a>
+        </div>
+        <div class='header__point header__point-call'>
+          <a href="#" class='header__menu-link'>
+            <img src="img/callMe.svg" alt="" class='header__icon'>
+            <p class='header__subtitle'>Позвонить нам</p>
+          </a>
+        </div>
+
+        <div class='header__point header__point-1'>
           <a href="#" class='header__menu-link'>
             <img src="img/heart.svg" alt="" class='header__icon'>
             <p class='header__subtitle'>Избранное</p>
           </a>
         </div>
-        <div class='header__point'>
+        <div class='header__point header__point-2'>
           <a href="#" class='header__menu-link'>
             <img src="img/compare.svg" alt="" class='header__icon'>
             <p class='header__subtitle'>Сравнение</p>
           </a>
         </div>
-        <div class='header__point'>
+        <div class='header__point header__point-3'>
           <a href="#" class='header__menu-link'>
             <img src="img/profile.svg" alt="" class='header__icon'>
             <p class='header__subtitle'>Профиль</p>

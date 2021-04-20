@@ -39,7 +39,7 @@ const setPosition = () => {
   };
 
 const checkBtns = () => {
-  btnLeft.disabled = position === 0
+  btnLeft.disabled = position === 0;
   btnRight.disabled = position <= -(itemsCount - slidesToShow) * itemWidth;
 
   };

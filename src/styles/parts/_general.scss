@@ -116,6 +116,7 @@ body {
 
   &__image {
     border-radius: 3px;
+    width: auto;
   }
 
   &__gradient::after {
@@ -185,6 +186,10 @@ body {
   &__button-left,
   &__button-right {
     top: 45%;
+  }
+
+  @include media-down(md) {
+    padding: 0 20px;
   }
 }
 

@@ -84,7 +84,8 @@ body {
 .preview {
   margin-bottom: 52px; }
   .preview__image {
-    border-radius: 3px; }
+    border-radius: 3px;
+    width: auto; }
   .preview__gradient::after {
     content: "";
     width: 100%;
@@ -133,6 +134,9 @@ body {
     opacity: 1; }
   .preview__button-left, .preview__button-right {
     top: 45%; }
+  @media (max-width: 999.98px) {
+    .preview {
+      padding: 0 20px; } }
 
 .categories {
   height: 332px; }
@@ -467,8 +471,7 @@ body {
         flex-wrap: wrap;
         justify-content: auto;
         margin-top: 10px;
-        padding-left: 20px;
-        padding-right: 20px; } }
+        padding: 0 20px; } }
   .header__logo {
     display: flex;
     gap: 12px;

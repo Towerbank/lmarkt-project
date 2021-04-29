@@ -303,7 +303,7 @@ body {
 
   @include media-down(md) {
     padding-left: 20px;
-    height: 210px;
+    height: 240px;
   }
 
   @include media-down(sm) {
@@ -338,7 +338,7 @@ body {
     right: 0;
     top: 0;
     width: 60px;
-    height: 160px;
+    height: 200px;
     background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
     opacity: 0.9;
     z-index: 1;
@@ -348,7 +348,7 @@ body {
     }
 
     @include media-down(sm) {
-      height: 120px;
+      height: 130px;
     }
   }
 
@@ -358,14 +358,13 @@ body {
     height: 210px;
 
     @include media-down(md) {
-      height: 160px;
+      height: 200px;
     }
 
     @include media-down(sm) {
       height: 130px;
+
     }
-
-
   }
 
   &__item::after {
@@ -388,6 +387,10 @@ body {
     @include media-down(md) {
       display: block;
       min-width: 99px;
+      min-height: 80px;
+      overflow: hidden;
+      border-radius: 5px;
+
     }
   }
 
@@ -399,6 +402,8 @@ body {
       height: auto;
       border-radius: 5px;
       object-fit: cover;
+      transform: scale(1.3);
+      object-position: 5px 5px;
     }
 
   }
@@ -421,7 +426,7 @@ body {
       color: #A0148E;
       font-size: 13px;
       z-intex: 0;
-      top: 50%;
+      top: 53%;
     }
 
   }

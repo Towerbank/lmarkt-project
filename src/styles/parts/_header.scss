@@ -67,53 +67,102 @@
     gap: 10px;
     align-items: center;
     margin-left: 50px;
+    list-style: none;
+  }
+
+  &__social-icon {
+    display: block;
+  }
+
+  &__icon--vk::before,
+  &__icon--vk::after,
+  &__icon--fb::before,
+  &__icon--fb::after,
+  &__icon--inst::before,
+  &__icon--inst::after,
+  &__icon--tg::before,
+  &__icon--tg::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__icon--vk::before,
+  &__icon--fb::before,
+  &__icon--inst::before,
+  &__icon--tg::before {
+    opacity: 0.3;
+  }
+
+  &__icon--vk::after,
+  &__icon--fb::after,
+  &__icon--inst::after,
+  &__icon--tg::after {
+    opacity: 0;
+  }
+
+  &__icon--vk:hover::after,
+  &__icon--fb:hover::after,
+  &__icon--inst:hover::after,
+  &__icon--tg:hover::after {
+    opacity: 1;
+  }
+
+  &__icon--vk,
+  &__icon--fb,
+  &__icon--inst,
+  &__icon--tg {
+    position: relative;
   }
 
   &__icon--vk {
-    opacity: 0.3;
-    background: url('../img/vk.svg') no-repeat;
     width: 25px;
     height: 14px;
   }
 
-  &__icon--vk:hover {
-    opacity: 1;
-    background: url('../img/vk-2.svg') no-repeat;
-  }
-
-  &__icon--fb {
-    opacity: 0.3;
-    background: url('../img/fb.svg') no-repeat;
-    width: 20px;
-    height: 18px;
-  }
-
-  &__icon--fb:hover {
-    opacity: 1;
-    background: url('../img/fb-2.svg') no-repeat;
-  }
-
+  &__icon--fb,
   &__icon--inst {
-    opacity: 0.3;
-    background: url('../img/inst.svg') no-repeat;
     width: 20px;
     height: 18px;
-  }
-
-  &__icon--inst:hover {
-    opacity: 1;
-    background: url('../img/inst-2.svg') no-repeat;
   }
 
   &__icon--tg {
-    opacity: 0.3;
-    background: url('../img/tg.svg') no-repeat;
     width: 22px;
     height: 17px;
   }
 
-  &__icon--tg:hover {
-    opacity: 1;
+  &__icon--vk::before {
+    background: url('../img/vk.svg') no-repeat;
+  }
+
+  &__icon--vk:after {
+    background: url('../img/vk-2.svg') no-repeat;
+  }
+
+  &__icon--fb::before {
+    background: url('../img/fb.svg') no-repeat;
+  }
+
+  &__icon--fb::after {
+    background: url('../img/fb-2.svg') no-repeat;
+  }
+
+  &__icon--inst::before {
+    background: url('../img/inst.svg') no-repeat;
+  }
+
+  &__icon--inst::after {
+    background: url('../img/inst-2.svg') no-repeat;
+  }
+
+  &__icon--tg::before {
+    background: url('../img/tg.svg') no-repeat;
+  }
+
+  &__icon--tg::after {
     background: url('../img/tg-2.svg') no-repeat;
   }
 

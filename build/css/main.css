@@ -340,6 +340,9 @@ body {
 
 .products {
   margin-bottom: 100px; }
+  @media (max-width: 1076.98px) {
+    .products {
+      padding: 0 20px; } }
   .products__list {
     display: grid;
     grid-template-columns: repeat(4, 283px);
@@ -474,6 +477,9 @@ body {
 
 .preview-down {
   margin-bottom: 60px; }
+  @media (max-width: 1076.98px) {
+    .preview-down {
+      padding: 0 20px; } }
   .preview-down__list {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
@@ -517,6 +523,9 @@ body {
 
 .brands {
   margin-bottom: 90px; }
+  @media (max-width: 1076.98px) {
+    .brands {
+      padding: 0 20px; } }
   .brands__title {
     margin-bottom: 40px; }
   .brands__table {
@@ -584,38 +593,49 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-left: 50px; }
+    margin-left: 50px;
+    list-style: none; }
+  .header__social-icon {
+    display: block; }
+  .header__icon--vk::before, .header__icon--vk::after, .header__icon--fb::before, .header__icon--fb::after, .header__icon--inst::before, .header__icon--inst::after, .header__icon--tg::before, .header__icon--tg::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .header__icon--vk::before, .header__icon--fb::before, .header__icon--inst::before, .header__icon--tg::before {
+    opacity: 0.3; }
+  .header__icon--vk::after, .header__icon--fb::after, .header__icon--inst::after, .header__icon--tg::after {
+    opacity: 0; }
+  .header__icon--vk:hover::after, .header__icon--fb:hover::after, .header__icon--inst:hover::after, .header__icon--tg:hover::after {
+    opacity: 1; }
+  .header__icon--vk, .header__icon--fb, .header__icon--inst, .header__icon--tg {
+    position: relative; }
   .header__icon--vk {
-    opacity: 0.3;
-    background: url("../img/vk.svg") no-repeat;
     width: 25px;
     height: 14px; }
-  .header__icon--vk:hover {
-    opacity: 1;
-    background: url("../img/vk-2.svg") no-repeat; }
-  .header__icon--fb {
-    opacity: 0.3;
-    background: url("../img/fb.svg") no-repeat;
+  .header__icon--fb, .header__icon--inst {
     width: 20px;
     height: 18px; }
-  .header__icon--fb:hover {
-    opacity: 1;
-    background: url("../img/fb-2.svg") no-repeat; }
-  .header__icon--inst {
-    opacity: 0.3;
-    background: url("../img/inst.svg") no-repeat;
-    width: 20px;
-    height: 18px; }
-  .header__icon--inst:hover {
-    opacity: 1;
-    background: url("../img/inst-2.svg") no-repeat; }
   .header__icon--tg {
-    opacity: 0.3;
-    background: url("../img/tg.svg") no-repeat;
     width: 22px;
     height: 17px; }
-  .header__icon--tg:hover {
-    opacity: 1;
+  .header__icon--vk::before {
+    background: url("../img/vk.svg") no-repeat; }
+  .header__icon--vk:after {
+    background: url("../img/vk-2.svg") no-repeat; }
+  .header__icon--fb::before {
+    background: url("../img/fb.svg") no-repeat; }
+  .header__icon--fb::after {
+    background: url("../img/fb-2.svg") no-repeat; }
+  .header__icon--inst::before {
+    background: url("../img/inst.svg") no-repeat; }
+  .header__icon--inst::after {
+    background: url("../img/inst-2.svg") no-repeat; }
+  .header__icon--tg::before {
+    background: url("../img/tg.svg") no-repeat; }
+  .header__icon--tg::after {
     background: url("../img/tg-2.svg") no-repeat; }
   .header__down {
     display: flex;
@@ -768,6 +788,9 @@ body {
 
 .footer {
   background-color: #FFF8FE; }
+  @media (max-width: 1076.98px) {
+    .footer {
+      padding: 0 20px; } }
   .footer__content {
     display: flex;
     flex-direction: column;

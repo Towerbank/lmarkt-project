@@ -465,6 +465,10 @@ body {
 .products {
   margin-bottom: 100px;
 
+  @include media-down(md) {
+    padding: 0 20px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: repeat(4, 283px);
@@ -661,6 +665,10 @@ body {
 .preview-down {
   margin-bottom: 60px;
 
+  @include media-down(md) {
+    padding: 0 20px;
+  }
+
   &__list {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
@@ -726,6 +734,10 @@ body {
 
 .brands {
   margin-bottom: 90px;
+
+  @include media-down(md) {
+    padding: 0 20px;
+  }
 
   &__title {
     margin-bottom: 40px;

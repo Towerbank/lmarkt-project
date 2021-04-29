@@ -1,6 +1,10 @@
 .footer {
   background-color: #FFF8FE;
 
+  @include media-down(md) {
+    padding: 0 20px;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;

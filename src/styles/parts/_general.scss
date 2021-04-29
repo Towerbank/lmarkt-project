@@ -60,6 +60,11 @@ body {
   width: 13px;
   height: 13px;
   opacity: 1;
+
+  @include media-down(sm) {
+    width: 7.2px;
+    height: 7.2px;
+  }
 }
 
 // Кнопки Лево-Право 
@@ -73,6 +78,11 @@ body {
   border-radius: 2px;
   border: none;
   cursor: pointer;
+
+  @include media-down(md) {
+    width: 30px;
+    height: 28px;
+  }
 }
 
 .button-left {
@@ -94,6 +104,11 @@ body {
   border-right: 2.5px solid #A0148E;
   border-top: 2.5px solid #A0148E;
   transform: rotate(225deg);
+
+  @include media-down(md) {
+    width: 8px;
+    height: 8px;
+  }
 }
 
 .button-right::before {
@@ -107,17 +122,42 @@ body {
   font-family: 'Exo 2', sans-serif;
   font-size: 30px;
   color: #2D0027;
+
+  @include media-down(md) {
+    text-align: center;
+    font-size: 18px;
+  }
 }
 
 
 
 .preview {
   margin-bottom: 52px;
+  position: relative;
+
+  @include media-down(sm) {
+    min-width: 280px;
+
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
 
   &__image {
     border-radius: 3px;
-    width: auto;
+
+    @include media-down(md) {
+      max-width: 190%;
+      object-fit: contain;
+      border-radius: 3px;
+      object-position: -180px;
+    }
+
+    @include media-down(sm) {
+      object-position: -205px;
+    }
+
   }
+
 
   &__gradient::after {
     content: "";
@@ -128,6 +168,10 @@ body {
     left: 0;
     background: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 100%);
     opacity: 0.3;
+
+    @include media-down(md) {
+      opacity: 0.8;
+    }
   }
 
   &__description {
@@ -136,18 +180,44 @@ body {
     left: 9%;
     color: #ffffff;
     font-family: "Exo 2", sans-serif;
+
+    @include media-down(md) {
+      min-width: 282px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      top: 8%;
+      left: 4%;
+    }
   }
 
   &__title {
     font-size: 30px;
     text-transform: uppercase;
     margin-bottom: -47px;
+
+    @include media-down(md) {
+      font-size: 13px;
+      margin-bottom: -15px;
+    }
   }
 
   &__subtitle {
     font-size: 60px;
     text-transform: uppercase;
     margin-bottom: 35px;
+
+    @include media-down(md) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__price {
+    @include media-down(md) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   &__new-price {
@@ -158,6 +228,15 @@ body {
     padding: 5px 13px 7px 12px;
     font-size: 30px;
     font-weight: bold;
+
+    @include media-down(md) {
+      font-size: 18px;
+      max-width: 93px;
+      max-height: 29px;
+      padding: 2px 11px 4px 12px;
+      margin: 0;
+      align-self: center;
+    }
   }
 
   &__old-price {
@@ -165,27 +244,54 @@ body {
     font-size: 30px;
     font-weight: bold;
     padding: 5px 13px 7px 12px;
+
+    @include media-down(md) {
+      font-size: 13px;
+      padding: 0;
+    }
   }
 
   &__dots {
     position: absolute;
     bottom: 9%;
+
+    @include media-down(sm) {
+      bottom: 5%;
+      left: 44%;
+      gap: 8px;
+    }
   }
 
   &__dot {
     background: #FFFFFF;
     opacity: 0.3;
+
+    @include media-down(sm) {
+      width: 5.5px;
+      height: 5.5px;
+    }
   }
 
   &__dot-active {
     width: 13px;
     height: 13px;
     opacity: 1;
+
+    @include media-down(sm) {
+      width: 7.2px;
+      height: 7.2px;
+    }
   }
 
   &__button-left,
   &__button-right {
     top: 45%;
+
+    @include media-down(sm) {
+      top: 40%;
+
+    }
+
   }
 
   @include media-down(md) {

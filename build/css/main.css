@@ -348,6 +348,9 @@ body {
     grid-template-columns: repeat(4, 283px);
     gap: 26px;
     position: relative; }
+    @media (max-width: 1076.98px) {
+      .products__list {
+        grid-template-columns: repeat(2, minmax(135px, 1fr)); } }
   .products__item {
     position: relative;
     padding: 39px 38px 30px 26px;
@@ -357,10 +360,20 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end; }
+    @media (max-width: 1076.98px) {
+      .products__item {
+        height: 255px;
+        padding-bottom: 0; } }
   .products__item:nth-of-type(2) {
     justify-content: flex-start; }
+    @media (max-width: 1076.98px) {
+      .products__item:nth-of-type(2) {
+        display: none; } }
   .products__item:nth-of-type(3), .products__item:nth-of-type(4) {
     justify-content: center; }
+  @media (max-width: 1076.98px) {
+    .products__item:nth-of-type(4) {
+      display: none; } }
   .products__points {
     position: absolute;
     display: flex;
@@ -371,15 +384,32 @@ body {
     opacity: 0.3; }
   .products__img-text {
     text-align: center; }
+  @media (max-width: 1076.98px) {
+    .products__image:first-of-type {
+      width: 106px;
+      height: 112px; } }
+  @media (max-width: 1076.98px) {
+    .products__image:nth-of-type(3) {
+      width: 78px;
+      height: 111px; } }
   .products__subtitle {
     text-align: center;
     font-size: 15px;
     font-weight: bold;
     color: #2D0027;
     width: 250px; }
+    @media (max-width: 1076.98px) {
+      .products__subtitle {
+        font-size: 13px;
+        word-wrap: break-word; } }
   .products__price-pic {
     display: flex;
     gap: 10px; }
+    @media (max-width: 1076.98px) {
+      .products__price-pic {
+        background: #FFF8FE;
+        width: 100%;
+        gap: 30px; } }
   .products__price {
     position: relative;
     background: #FFF8FE;
@@ -832,38 +862,49 @@ body {
   .footer__social {
     display: flex;
     gap: 10px;
-    align-items: center; }
-  .footer__icon-vk {
-    opacity: 0.3;
-    background: url("../img/vk.svg") no-repeat;
+    align-items: center;
+    list-style: none; }
+  .footer__social-icon {
+    display: block; }
+  .footer__icon--vk::before, .footer__icon--vk::after, .footer__icon--fb::before, .footer__icon--fb::after, .footer__icon--inst::before, .footer__icon--inst::after, .footer__icon--tg::before, .footer__icon--tg::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; }
+  .footer__icon--vk::before, .footer__icon--fb::before, .footer__icon--inst::before, .footer__icon--tg::before {
+    opacity: 0.3; }
+  .footer__icon--vk::after, .footer__icon--fb::after, .footer__icon--inst::after, .footer__icon--tg::after {
+    opacity: 0; }
+  .footer__icon--vk:hover::after, .footer__icon--fb:hover::after, .footer__icon--inst:hover::after, .footer__icon--tg:hover::after {
+    opacity: 1; }
+  .footer__icon--vk, .footer__icon--fb, .footer__icon--inst, .footer__icon--tg {
+    position: relative; }
+  .footer__icon--vk {
     width: 25px;
     height: 14px; }
-  .footer__icon-vk:hover {
-    opacity: 1;
-    background: url("../img/vk-2.svg") no-repeat; }
-  .footer__icon-fb {
-    opacity: 0.3;
-    background: url("../img/fb.svg") no-repeat;
+  .footer__icon--fb, .footer__icon--inst {
     width: 20px;
     height: 18px; }
-  .footer__icon-fb:hover {
-    opacity: 1;
-    background: url("../img/fb-2.svg") no-repeat; }
-  .footer__icon-inst {
-    opacity: 0.3;
-    background: url("../img/inst.svg") no-repeat;
-    width: 20px;
-    height: 18px; }
-  .footer__icon-inst:hover {
-    opacity: 1;
-    background: url("../img/inst-2.svg") no-repeat; }
-  .footer__icon-tg {
-    opacity: 0.3;
-    background: url("../img/tg.svg") no-repeat;
+  .footer__icon--tg {
     width: 22px;
     height: 17px; }
-  .footer__icon-tg:hover {
-    opacity: 1;
+  .footer__icon--vk::before {
+    background: url("../img/vk.svg") no-repeat; }
+  .footer__icon--vk:after {
+    background: url("../img/vk-2.svg") no-repeat; }
+  .footer__icon--fb::before {
+    background: url("../img/fb.svg") no-repeat; }
+  .footer__icon--fb::after {
+    background: url("../img/fb-2.svg") no-repeat; }
+  .footer__icon--inst::before {
+    background: url("../img/inst.svg") no-repeat; }
+  .footer__icon--inst::after {
+    background: url("../img/inst-2.svg") no-repeat; }
+  .footer__icon--tg::before {
+    background: url("../img/tg.svg") no-repeat; }
+  .footer__icon--tg::after {
     background: url("../img/tg-2.svg") no-repeat; }
   .footer__number {
     font-size: 22px;

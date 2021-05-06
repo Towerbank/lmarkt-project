@@ -474,6 +474,10 @@ body {
     grid-template-columns: repeat(4, 283px);
     gap: 26px;
     position: relative;
+
+    @include media-down(md) {
+      grid-template-columns: repeat(2, minmax(135px, 1fr));
+    }
   }
 
   &__item {
@@ -485,15 +489,30 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+
+    @include media-down(md) {
+      height: 255px;
+      padding-bottom: 0;
+    }
   }
 
   &__item:nth-of-type(2) {
     justify-content: flex-start;
+
+    @include media-down(md) {
+      display: none;
+    }
   }
 
   &__item:nth-of-type(3),
   &__item:nth-of-type(4) {
     justify-content: center;
+  }
+
+  &__item:nth-of-type(4) {
+    @include media-down(md) {
+      display: none;
+    }
   }
 
   &__points {
@@ -506,8 +525,23 @@ body {
     opacity: 0.3;
   }
 
+
   &__img-text {
     text-align: center;
+  }
+
+  &__image:first-of-type {
+    @include media-down(md) {
+      width: 106px;
+      height: 112px;
+    }
+  }
+
+  &__image:nth-of-type(3) {
+    @include media-down(md) {
+      width: 78px;
+      height: 111px;
+    }
   }
 
   &__subtitle {
@@ -516,11 +550,24 @@ body {
     font-weight: bold;
     color: #2D0027;
     width: 250px;
+
+    @include media-down(md) {
+      font-size: 13px;
+      word-wrap: break-word;
+    }
   }
 
   &__price-pic {
     display: flex;
     gap: 10px;
+
+    @include media-down(md) {
+      background: #FFF8FE;
+      width: 100%;
+      gap: 30px;
+
+    }
+
   }
 
   &__price {
@@ -535,6 +582,8 @@ body {
     font-weight: bold;
     width: 88px;
     height: 45px;
+
+    @include media-down(md) {}
   }
 
   &__item:first-of-type &__price {
@@ -598,7 +647,6 @@ body {
     display: grid;
     position: relative;
     grid-template-columns: repeat(5, 1fr);
-
   }
 
   &__tool {

@@ -55,12 +55,18 @@
 </div>
 {% endmacro %}
 
-{% macro sorts(src, subtitle, description) %}
+{% macro sorts(src, subtitle, description1, description2, description3, description4, description5, description6)
+%}
 <div class='tools__tool'>
   <img class='tools__image' src="img/{{src}}.svg" alt="">
   <h2 class='tools__subtitle'>{{subtitle}}</h2>
-  <p class='tools__description'>
-    {{description|safe}}
-  </p>
+  <ul class='tools__description'>
+    <li class="tools__item"><a class="tools__link" href="#">{{description1|safe}}</a></li>
+    <li class="tools__item"><a class="tools__link" href="#">{{description2|safe}}</a></li>
+    <li class="tools__item"><a class="tools__link" href="#">{{description3|safe}}</a></li>
+    <li class="tools__item"><a class="tools__link" href="#">{{description4|safe}}</a></li>
+    <li class="tools__item"><a class="tools__link" href="#">{{description5|safe}}</a></li>
+    <li class="tools__item"><a class="tools__link" href="#">{{description6|safe}}</a></li>
+  </ul>
 </div>
 {% endmacro %}

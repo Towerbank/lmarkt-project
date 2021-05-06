@@ -20,36 +20,46 @@
 ] %}
 
 {% set sortOfgoods = [
-{ src: 'string', subtitle: 'Струнные', description: 'Классические гитары <br>
-Акустические гитары <br>
-Акустические бас-гитары<br>
-Электрогитары <br>
-Бас-гитары <br>
-Укулеле' },
-{ src: 'keyboards', subtitle: 'Клавишные', description: ' Синтезаторы<br>
-Цифровые пианино<br>
-Цифровые органы<br>
-Акустические клавишные <br>
-инструменты<br>
-MIDI-клавиатуры' },
-{ src: 'drums', subtitle: 'Ударные', description: 'Акустические ударные<br>
-Электронные ударные<br>
-Тарелки<br>
-Стойки<br>
-Рамы<br>
-Педали' },
-{ src: 'winds', subtitle: 'Духовые', description: ' Блок-флейты<br>
-Флейты<br>
-Саксофоны<br>
-Кларнеты<br>
-Трубы<br>
-Тромбоны' },
-{ src: 'reeds', subtitle: 'Язычковые', description: ' Блок-флейты<br>
-Флейты<br>
-Саксофоны<br>
-Кларнеты<br>
-Трубы<br>
-<br>' }
+{ src: 'string',
+subtitle: 'Струнные',
+description1: 'Классические гитары',
+description2: 'Акустические гитары',
+description3: 'Акустические бас-гитары',
+description4: 'Электрогитары',
+description5: 'Бас-гитары',
+description6: 'Укулеле' },
+{ src: 'keyboards',
+subtitle: 'Клавишные',
+description1: 'Синтезаторы',
+description2: 'Цифровые пианино',
+description3: 'Цифровые органы',
+description4: 'Акустические клавишные',
+description5: 'инструменты',
+description6: 'MIDI-клавиатуры' },
+{ src: 'drums',
+subtitle: 'Ударные',
+description1: 'Акустические ударные',
+description2: 'Электронные ударные',
+description3: 'Тарелки',
+description4: 'Стойки',
+description5: 'Рамы',
+description6: 'Педали' },
+{ src: 'winds',
+subtitle: 'Духовые',
+description1: 'Блок-флейты',
+description2: 'Флейты',
+description3: 'Саксофоны',
+description4: 'Кларнеты',
+description5: 'Трубы',
+description6: 'Тромбоны' },
+{ src: 'reeds',
+subtitle: 'Язычковые',
+description1: ' Блок-флейты',
+description2: 'Флейты',
+description3: 'Саксофоны',
+description4: 'Кларнеты',
+description5: 'Трубы',
+description6: '<br>' }
 ] %}
 
 {% block content %}
@@ -190,7 +200,8 @@ MIDI-клавиатуры' },
         <h2 class='tools__title title-h2'>инструменты по видам</h2>
         <div class='tools__list'>
           {% for sortOfgood in sortOfgoods %}
-          {{ sorts(sortOfgood.src, sortOfgood.subtitle, sortOfgood.description) }}
+          {{ sorts(sortOfgood.src, sortOfgood.subtitle, sortOfgood.description1, sortOfgood.description2,
+          sortOfgood.description3, sortOfgood.description4, sortOfgood.description5, sortOfgood.description6) }}
           {% endfor %}
           <button class='tools__line'></button>
           <button class='btn__left button-left tools__button-left'></button>

@@ -689,12 +689,13 @@ body {
     text-align: center;
     font-size: 15px;
     line-height: 33px;
-    color: #2D0027;
-    opacity: 0.5;
+
   }
 
   &__link {
     text-decoration: none;
+    color: #2D0027;
+    opacity: 0.5;
   }
 
   &__line {

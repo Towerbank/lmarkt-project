@@ -58,7 +58,7 @@
 {% macro sorts(src, subtitle, description1, description2, description3, description4, description5, description6)
 %}
 <div class='tools__tool'>
-  <img class='tools__image' src="img/{{src}}.svg" alt="">
+  <a class="tools__img-link" href="#"><img class='tools__image' src="img/{{src}}.svg" alt=""></a>
   <h2 class='tools__subtitle'>{{subtitle}}</h2>
   <ul class='tools__description'>
     <li class="tools__item"><a class="tools__link" href="#">{{description1|safe}}</a></li>

@@ -462,11 +462,13 @@ body {
 }
 
 
+
 .products {
   margin-bottom: 100px;
 
   @include media-down(md) {
     padding: 0 20px;
+    margin-bottom: 50px;
   }
 
   &__list {
@@ -477,6 +479,7 @@ body {
 
     @include media-down(md) {
       grid-template-columns: repeat(2, minmax(135px, 1fr));
+      gap: 10px;
     }
   }
 
@@ -492,7 +495,7 @@ body {
 
     @include media-down(md) {
       height: 255px;
-      padding-bottom: 0;
+      padding: 39px 0 0 0;
     }
   }
 
@@ -507,6 +510,10 @@ body {
   &__item:nth-of-type(3),
   &__item:nth-of-type(4) {
     justify-content: center;
+
+    @include media-down(md) {
+      justify-content: flex-end;
+    }
   }
 
   &__item:nth-of-type(4) {
@@ -530,14 +537,20 @@ body {
     text-align: center;
   }
 
-  &__image:first-of-type {
+  &__item:first-of-type &__img-text {
     @include media-down(md) {
-      width: 106px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__item:first-of-type &__image {
+    @include media-down(md) {
+      width: 106p;
       height: 112px;
     }
   }
 
-  &__image:nth-of-type(3) {
+  &__item:nth-of-type(3) &__image {
     @include media-down(md) {
       width: 78px;
       height: 111px;
@@ -553,7 +566,8 @@ body {
 
     @include media-down(md) {
       font-size: 13px;
-      word-wrap: break-word;
+      width: 90%;
+      padding-left: 10px;
     }
   }
 
@@ -564,8 +578,8 @@ body {
     @include media-down(md) {
       background: #FFF8FE;
       width: 100%;
-      gap: 30px;
-
+      height: 45px;
+      justify-content: space-between;
     }
 
   }
@@ -589,6 +603,10 @@ body {
   &__item:first-of-type &__price {
     color: #A0148E;
     line-height: 30px;
+
+    @include media-down(md) {
+      line-height: 30px;
+    }
   }
 
   &__item:first-of-type &__price::before {
@@ -601,12 +619,22 @@ body {
     bottom: -5%;
     left: 27%;
     text-decoration: line-through;
+
+    @include media-down(md) {
+      bottom: -5%;
+      left: 18.5%;
+    }
   }
 
   &__pic {
     padding: 10px;
     border: 3px solid #F7ECF5;
     border-radius: 2px;
+
+    @include media-down(md) {
+      border: none;
+      padding: 11px 13px 14px 0;
+    }
   }
 
   &__link {
@@ -616,37 +644,65 @@ body {
   &__dots {
     position: absolute;
     bottom: -10%;
+
+    @include media-down(md) {
+      left: 37%;
+    }
   }
 
   &__dot {
     background: #A0148E;
     opacity: 0.15;
+
+    @include media-down(md) {
+      width: 5.5px;
+      height: 5.5px;
+    }
   }
 
   &__dot-active {
     width: 13px;
     height: 13px;
     opacity: 1;
+
+    @include media-down(md) {
+      width: 7.5px;
+      height: 7.5px;
+    }
   }
 
   &__button-left,
   &__button-right {
     bottom: 43%;
+
+    @include media-down(md) {
+      bottom: 50%;
+    }
   }
 
 }
+
+
 
 .tools {
   margin-bottom: 100px;
 
   &__title {
     margin-bottom: 55px;
+
+    @include media-down(md) {
+      margin-bottom: 20px;
+    }
   }
 
   &__list {
     display: grid;
     position: relative;
     grid-template-columns: repeat(5, 1fr);
+
+    @include media-down(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 
   &__tool {
@@ -654,6 +710,28 @@ body {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+  }
+
+  &__tool:nth-of-type(4) {
+    @include media-down(md) {
+      order: 1;
+      display: none;
+    }
+  }
+
+  &__img-link {
+    cursor: initial;
+
+    @include media-down(md) {
+      cursor: pointer;
+    }
+  }
+
+  &__image {
+    @include media-down(md) {
+      width: 40%;
+      padding-left: 20px;
+    }
   }
 
   &__subtitle {
@@ -664,6 +742,7 @@ body {
 
     @include media-down(md) {
       font-size: 13px;
+      margin-top: 5px;
     }
   }
 
@@ -671,7 +750,7 @@ body {
     margin-top: 25px;
 
     @include media-down(md) {
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
 
@@ -682,14 +761,12 @@ body {
     @include media-down(md) {
       display: none;
     }
-
   }
 
   &__item {
     text-align: center;
     font-size: 15px;
     line-height: 33px;
-
   }
 
   &__link {
@@ -707,6 +784,7 @@ body {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 69.27%);
     border: none;
     outline: none;
+    cursor: pointer;
 
     @include media-down(md) {
       display: none;
@@ -756,6 +834,7 @@ body {
   }
 }
 
+
 .preview-down {
   margin-bottom: 60px;
 
@@ -764,17 +843,46 @@ body {
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: 2fr 1fr 2fr;
-    column-gap: 27px;
+    position: relative;
+    display: flex;
+    gap: 27px;
+
+    @include media-down(md) {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+    }
   }
 
   &__item {
     position: relative;
+
+    @include media-down(md) {
+      min-width: 280px;
+      min-height: 177px;
+      overflow: hidden;
+    }
+  }
+
+  &__item:first-child,
+  &__item:nth-child(3) {
+    @include media-down(md) {
+      display: none;
+    }
   }
 
   &__image {
     border-radius: 3px;
+
+    @include media-down(md) {
+      object-position: 30px 10px;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+
+
+    }
   }
 
   &__description {
@@ -802,6 +910,7 @@ body {
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
+
   }
 
   &__price {
@@ -811,16 +920,65 @@ body {
     padding: 5px 13px 7px 12px;
     font-size: 30px;
     font-weight: bold;
+
+    @include media-down(md) {
+      font-size: 18px;
+    }
   }
 
   &__item:nth-of-type(2) &__title {
     font-size: 30px;
     margin: 25px;
+
+    @include media-down(md) {
+      font-size: 13px;
+    }
   }
 
   &__item:nth-of-type(2) &__subtitle {
     font-size: 60px;
     margin-top: -120px;
+
+    @include media-down(md) {
+      font-size: 20px;
+    }
+  }
+
+
+  &__dots {
+    display: none;
+    position: absolute;
+    bottom: 5%;
+
+    @include media-down(md) {
+      display: block;
+    }
+  }
+
+  &__dot {
+    background: #FFFFFF;
+    opacity: 0.15;
+    width: 5.5px;
+    height: 5.5px;
+
+  }
+
+  &__dot-active {
+    width: 13px;
+    height: 13px;
+    opacity: 1;
+    width: 7.5px;
+    height: 7.5px;
+  }
+
+  &__button-left,
+  &__button-right {
+    bottom: 40%;
+    display: none;
+
+    @include media-down(md) {
+      display: block;
+    }
   }
 
 }

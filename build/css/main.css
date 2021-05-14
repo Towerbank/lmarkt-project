@@ -779,7 +779,7 @@ body {
     .brands__brand:nth-of-type(10), .brands__brand:nth-of-type(13), .brands__brand:nth-of-type(15), .brands__brand:nth-of-type(19), .brands__brand:nth-of-type(20), .brands__brand:nth-of-type(29), .brands__brand:nth-of-type(30) {
       display: none; } }
   .brands__brand {
-    width: 80%;
+    width: 50%;
     margin: 0 auto; }
   @media (max-width: 1076.98px) {
     .brands__brand img {

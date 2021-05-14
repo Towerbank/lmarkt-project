@@ -304,6 +304,7 @@ body {
   @include media-down(md) {
     padding-left: 20px;
     height: 240px;
+    min-width: 280px;
   }
 
   @include media-down(sm) {
@@ -465,6 +466,7 @@ body {
   @include media-down(md) {
     padding: 0 20px;
     margin-bottom: 50px;
+    min-width: 280px;
   }
 
   &__list {
@@ -687,6 +689,7 @@ body {
     margin-bottom: 50px;
     margin-left: 20px;
     overflow: hidden;
+    min-width: 280px;
   }
 
   &__title {
@@ -886,6 +889,7 @@ body {
   @include media-down(md) {
     padding: 0 20px;
     margin-bottom: -50px;
+    min-width: 280px;
   }
 
   &__list {
@@ -895,13 +899,16 @@ body {
     gap: 27px;
 
     @include media-down(md) {
-      grid-template-columns: minmax(280px, 1fr);
-      overflow: hidden;
+      display: block;
+
+      gap: 0;
     }
   }
 
   &__item {
     position: relative;
+    min-width: 280px;
+    overflow: hidden;
   }
 
   &__item:first-child,
@@ -915,7 +922,6 @@ body {
     display: none;
     content: "";
     width: 100%;
-    max-width: 517px;
     height: 100%;
     max-height: 177px;
     position: absolute;
@@ -924,6 +930,7 @@ body {
     background: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 88.95%);
     opacity: 0.8;
     border-radius: 3px;
+    overflow: hidden;
 
     @include media-down(md) {
       display: block;
@@ -934,10 +941,13 @@ body {
     border-radius: 3px;
 
     @include media-down(md) {
-      max-width: 140%;
+
+      width: 140%;
+      min-width: 280px;
       object-fit: contain;
-      object-position: -55px -100px;
+      object-position: -50px -100px;
       border-radius: 3px;
+
     }
 
   }
@@ -957,7 +967,7 @@ body {
     @include media-down(md) {
       height: 35%;
       top: 13%;
-      left: 18%;
+      left: 19%;
       z-index: 1;
     }
   }
@@ -1053,6 +1063,7 @@ body {
 
   @include media-down(md) {
     padding: 0 20px;
+
   }
 
   &__title {
@@ -1093,6 +1104,17 @@ body {
   &__brand:nth-of-type(30) {
     @include media-down(md) {
       display: none;
+    }
+  }
+
+  &__brand {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__brand img {
+    @include media-down(md) {
+      width: 100%;
     }
   }
 

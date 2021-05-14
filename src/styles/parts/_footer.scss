@@ -2,7 +2,8 @@
   background-color: #FFF8FE;
 
   @include media-down(md) {
-    padding: 0 20px;
+    padding: 25px 20px;
+    min-width: 280px;
   }
 
   &__content {
@@ -12,11 +13,75 @@
     padding-right: 90px;
     gap: 80px;
     padding-bottom: 40px;
+
+    @include media-down(md) {
+      padding: 0;
+      gap: 10px;
+    }
+  }
+
+  &__points {
+    display: flex;
+    justify-content: space-between;
+
+    @include media-down(md) {
+      flex-direction: column;
+      padding: 12px 0 13px 20px;
+      border: 1px solid #EFE4ED;
+      border-radius: 3px;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+  }
+
+  &__points &__list {
+    @include media-down(md) {
+      border-bottom: 1px solid #EFE4ED;
+    }
   }
 
   &__table {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 320px;
+
+    @include media-down(md) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__apps {
+    margin-left: auto;
+
+    @include media-down(md) {
+      margin: 0 auto;
+    }
+  }
+
+  &__apps &__item:nth-child(2) {
+    margin-top: 2.5px;
+  }
+
+  &__apps &__item:first-child {
+    @include media-down(md) {
+      display: none;
+    }
+  }
+
+  &__apps &__item:not(:first-child) {
+    opacity: 0.7;
+  }
+
+  &__apps &__list {
+    @include media-down(md) {
+      display: flex;
+      flex-direction: row;
+
+    }
+  }
+
+  &__img {
+    width: 100px;
   }
 
   &__list {
@@ -32,12 +97,23 @@
     color: #2D0027;
     opacity: 0.5;
     font-size: 15px;
+
+    @include media-down(md) {
+      font-size: 12px;
+
+    }
   }
 
   &__list &__item:first-child {
     font-size: 22px;
     font-weight: bold;
     padding-bottom: 10px;
+
+    @include media-down(md) {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 0;
+    }
   }
 
   &__link {
@@ -48,17 +124,31 @@
   &__bottom {
     display: flex;
     justify-content: space-between;
+
+    @include media-down(md) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__copyright {
     font-size: 15px;
     color: #2D0027;
     opacity: 0.3;
+
+    @include media-down(md) {
+      order: 1;
+    }
   }
 
   &__social-number {
     display: flex;
     gap: 160px;
+
+    @include media-down(md) {
+      gap: 0;
+      flex-direction: column-reverse;
+    }
   }
 
   &__social {
@@ -66,6 +156,10 @@
     gap: 10px;
     align-items: center;
     list-style: none;
+
+    @include media-down(md) {
+      padding-left: 20px;
+    }
   }
 
   &__social-icon {

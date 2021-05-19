@@ -1078,10 +1078,12 @@ body {
       border-top: 1.5px solid #967C92;
       transform: rotate(-45deg);
       z-index: 1; } }
-  .footer__checkbox:checked ~ label::before {
-    transform: rotate(135deg); }
-  .footer__list .footer__checkbox:checked ~ .footer__item {
-    display: none; }
+  @media (max-width: 1076.98px) {
+    .footer__checkbox:checked ~ label::before {
+      transform: rotate(135deg); } }
+  @media (max-width: 1076.98px) {
+    .footer__list .footer__checkbox:checked ~ .footer__item {
+      display: none; } }
   .footer__table {
     display: grid;
     grid-template-columns: 1fr 320px; }

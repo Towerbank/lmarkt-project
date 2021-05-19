@@ -1063,7 +1063,7 @@ body {
 
   @include media-down(md) {
     padding: 0 20px;
-
+    margin-bottom: 30px;
   }
 
   &__title {
@@ -1080,8 +1080,10 @@ body {
     align-items: center;
     row-gap: 20px;
 
+
     @include media-down(md) {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, minmax(50px, 1fr));
+      row-gap: 10px;
     }
   }
 
@@ -1108,7 +1110,7 @@ body {
   }
 
   &__brand {
-    width: 50%;
+    width: 40%;
     margin: 0 auto;
   }
 

@@ -758,18 +758,16 @@ body {
   .brands__title {
     margin-bottom: 40px; }
   .brands__table {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    display: flex;
+    flex-direction: column; }
+  .brands__subtitles {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    list-style: none;
     text-align: center;
-    align-items: center;
-    row-gap: 20px; }
-    @media (max-width: 1076.98px) {
-      .brands__table {
-        grid-template-columns: repeat(3, minmax(50px, 1fr));
-        row-gap: 10px; } }
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px; }
   .brands__subtitle {
     font-weight: bold;
     font-size: 15px;
@@ -777,15 +775,64 @@ body {
     @media (max-width: 1076.98px) {
       .brands__subtitle {
         display: none; } }
+  .brands__box {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    row-gap: 20px; }
+    @media (max-width: 1076.98px) {
+      .brands__box {
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        row-gap: 10px; } }
   @media (max-width: 1076.98px) {
-    .brands__brand:nth-of-type(10), .brands__brand:nth-of-type(13), .brands__brand:nth-of-type(15), .brands__brand:nth-of-type(19), .brands__brand:nth-of-type(20), .brands__brand:nth-of-type(29), .brands__brand:nth-of-type(30) {
+    .brands__brand--5, .brands__brand--8, .brands__brand--10, .brands__brand--14, .brands__brand--15, .brands__brand--24, .brands__brand--25 {
       display: none; } }
+  .brands__brand--1 {
+    order: -18; }
+  .brands__brand--11 {
+    order: -17; }
+  .brands__brand--2 {
+    order: -16; }
+  .brands__brand--6 {
+    order: -15; }
+  .brands__brand--7 {
+    order: -14; }
+  .brands__brand--12 {
+    order: -13; }
+  .brands__brand--21 {
+    order: -12; }
+  .brands__brand--16 {
+    order: -11; }
+  .brands__brand--17 {
+    order: -10; }
+  .brands__brand--22 {
+    order: -9; }
+  .brands__brand--18 {
+    order: -8; }
+  .brands__brand--3 {
+    order: -7; }
+  .brands__brand--13 {
+    order: -6; }
+  .brands__brand--19 {
+    order: -5; }
+  .brands__brand--9 {
+    order: -4; }
+  .brands__brand--20 {
+    order: -3; }
+  .brands__brand--4 {
+    order: -2; }
+  .brands__brand--23 {
+    order: -1; }
   .brands__brand {
-    width: 40%;
+    width: 100%;
     margin: 0 auto; }
   @media (max-width: 1076.98px) {
     .brands__brand img {
-      width: 100%; } }
+      width: 70%; } }
 
 .header {
   margin-bottom: 20px;

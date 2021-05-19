@@ -65,11 +65,15 @@
   }
 
   &__checkbox:checked~label::before {
-    transform: rotate(135deg);
+    @include media-down(md) {
+      transform: rotate(135deg);
+    }
   }
 
   &__list &__checkbox:checked~&__item {
-    display: none;
+    @include media-down(md) {
+      display: none;
+    }
   }
 
   &__table {

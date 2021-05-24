@@ -888,9 +888,20 @@ body {
 
   @include media-down(md) {
     padding: 0 20px;
+    margin: 0 auto;
     margin-bottom: -50px;
     min-width: 280px;
+    max-width: 400px;
+    height: 300px;
   }
+
+  @include media-down(xs) {
+    height: 250px;
+  }
+
+
+
+
 
   &__list {
     position: relative;
@@ -900,16 +911,18 @@ body {
 
     @include media-down(md) {
       display: block;
-
+      overflow: hidden;
       gap: 0;
+
     }
   }
 
   &__item {
     position: relative;
-    min-width: 280px;
-    overflow: hidden;
+
+    @include media-down(md) {}
   }
+
 
   &__item:first-child,
   &__item:nth-child(3) {
@@ -923,14 +936,12 @@ body {
     content: "";
     width: 100%;
     height: 100%;
-    max-height: 177px;
     position: absolute;
     top: 0;
     left: 0;
     background: linear-gradient(180deg, #160013 0%, rgba(22, 0, 19, 0) 88.95%);
     opacity: 0.8;
     border-radius: 3px;
-    overflow: hidden;
 
     @include media-down(md) {
       display: block;
@@ -941,13 +952,16 @@ body {
     border-radius: 3px;
 
     @include media-down(md) {
-
-      width: 140%;
       min-width: 280px;
-      object-fit: contain;
-      object-position: -50px -100px;
+      width: 140%;
+      height: 250px;
+      object-fit: cover;
+      object-position: -55px -75px;
       border-radius: 3px;
+    }
 
+    @include media-down(xs) {
+      height: 177px;
     }
 
   }
@@ -984,6 +998,10 @@ body {
     font-size: 30px;
     text-transform: uppercase;
     text-align: center;
+
+    @include media-down(md) {
+      margin-bottom: 15px;
+    }
   }
 
   &__price {
@@ -1020,7 +1038,7 @@ body {
   &__dots {
     display: none;
     position: absolute;
-    bottom: 42%;
+    bottom: 15%;
     left: 40%;
 
     @include media-down(md) {
@@ -1046,7 +1064,7 @@ body {
 
   &__button-left,
   &__button-right {
-    top: 30%;
+    top: 40%;
     display: none;
 
     @include media-down(md) {
@@ -1064,6 +1082,7 @@ body {
   @include media-down(md) {
     padding: 0 20px;
     margin-bottom: 30px;
+    min-width: 280px;
   }
 
   &__title {

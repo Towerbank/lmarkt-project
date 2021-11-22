@@ -1,52 +1,53 @@
 'use strict';
-
-var gulp = require('gulp');
-var changed = require('gulp-changed');
-var imagemin = require('gulp-imagemin');
-var nunjucks = require('gulp-nunjucks');
-var sass = require('gulp-sass');
-var webp = require('gulp-webp');
-var clone = require('gulp-clone');
-var browsersync = require('browser-sync');
-var svgSprite = require('gulp-svg-sprite');
-var svgmin = require('gulp-svgmin');
-var cheerio = require('gulp-cheerio');
-var replace = require('gulp-replace');
-var del = require('del');
-var reload = browsersync.reload;
-var imgClone = clone.sink();
-var imageminMozjpeg = require('imagemin-mozjpeg');
-var imageminOptipng = require('imagemin-optipng');
+import gulp from 'gulp';
+import changed from 'gulp-changed';
+import imagemin from 'gulp-imagemin';
+import nunjucks from 'gulp-nunjucks';
+import gulpSass from 'gulp-sass';
+import dartSass from 'sass';
+const sass = gulpSass(dartSass);
+import webp from 'gulp-webp';
+import clone from 'gulp-clone';
+import browsersync from 'browser-sync';
+import svgSprite from 'gulp-svg-sprite';
+import svgmin from 'gulp-svgmin';
+import cheerio from 'gulp-cheerio';
+import replace from 'gulp-replace';
+import del from 'del';
+const reload = browsersync.reload;
+const imgClone = clone.sink();
+import imageminMozjpeg from 'imagemin-mozjpeg';
+import imageminOptipng from 'imagemin-optipng';
 //последние две возможно не нужны
 
-var path = {
+const path = {
   src: {
     html: 'src/*.html',
     styles: 'src/styles/*.scss',
     js: 'src/*.js',
     img: 'src/img/*.{jpg,jpeg,png,webp,svg}',
     svg: "src/img/svg/*.svg"
-    },
+  },
   build: {
     html: 'build/',
     styles: 'build/css/',
     js: 'build/',
     img: 'build/img/',
     svg: "build/img/svg"
-    },
+  },
   watch: {
     html: 'src/**/*.html',
     styles: 'src/styles/**/*.scss',
     js: 'src/**/*.js',
     img: 'src/img/**/*.{jpg,jpeg,png,webp,svg}',
     svg: "src/img/svg/*.svg"
-    },
-    
+  },
+
   base: './build'
 };
 
-function browserSync(done) {
-  browsersync.init ({
+const browserSync = (done) => {
+  browsersync.init({
     server: {
       baseDir: path.base
     },
@@ -55,51 +56,51 @@ function browserSync(done) {
   done();
 };
 
-function clean() {
+const clean = () => {
   return del(path.base);
 };
 
-function html() {
+const html = () => {
   return gulp
-  .src(path.src.html)
-  .pipe(nunjucks.compile())
-  .pipe(gulp.dest(path.build.html))
-  .pipe(reload({stream: true}));
+    .src(path.src.html)
+    .pipe(nunjucks.compile())
+    .pipe(gulp.dest(path.build.html))
+    .pipe(reload({ stream: true }));
 };
 
-function styles() {
+const styles = () => {
   return gulp
-  .src(path.src.styles)
-  .pipe(sass().on('error', sass.logError))
-  .pipe(gulp.dest(path.build.styles))
-  .pipe(reload({stream: true}));
+    .src(path.src.styles)
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest(path.build.styles))
+    .pipe(reload({ stream: true }));
 };
 
-function js() {
+const js = () => {
   return gulp
-  .src(path.src.js)
-  .pipe(gulp.dest(path.build.js))
-  .pipe(reload({stream: true}));
+    .src(path.src.js)
+    .pipe(gulp.dest(path.build.js))
+    .pipe(reload({ stream: true }));
 };
 
-function img() {
+const img = () => {
   return gulp
-  .src(path.src.img)
-  .pipe(changed(path.build.img))
-  .pipe(imagemin([
-    imageminMozjpeg({quality: 75, progressive: true}),
-    imageminOptipng({optimizationLevel: 5})
-  ]))
+    .src(path.src.img)
+    .pipe(changed(path.build.img))
+    .pipe(imagemin([
+      imageminMozjpeg({ quality: 75, progressive: true }),
+      imageminOptipng({ optimizationLevel: 5 })
+    ]))
 
-  .pipe(imgClone)
-  .pipe(webp())
-  .pipe(imgClone.tap())
-    
-  .pipe(gulp.dest(path.build.img))
-  .pipe(reload({stream: true}));
+    .pipe(imgClone)
+    .pipe(webp())
+    .pipe(imgClone.tap())
+
+    .pipe(gulp.dest(path.build.img))
+    .pipe(reload({ stream: true }));
 };
 
-function svg() {
+const svg = () => {
   return gulp
     .src(path.src.svg)
     .pipe(cheerio({
@@ -110,7 +111,7 @@ function svg() {
       },
       parserOptions: { xmlMode: true }
     }))
-    
+
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -119,11 +120,11 @@ function svg() {
       }
     }))
 
-  .pipe(gulp.dest(path.build.svg))
-  .pipe(reload({stream: true}));
+    .pipe(gulp.dest(path.build.svg))
+    .pipe(reload({ stream: true }));
 };
 
-function watchFiles() {
+const watchFiles = () => {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.styles], styles);
   gulp.watch([path.watch.js], js);

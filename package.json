@@ -21,7 +21,8 @@
     "gulp-sass": "^5.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^3.0.0",
-    "gulp-webp": "^4.0.1"
+    "gulp-webp": "^4.0.1",
+    "sass": "^1.43.4"
   },
   "dependencies": {
     "@glidejs/glide": "^3.4.1",

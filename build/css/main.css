@@ -1227,16 +1227,7 @@ body {
   opacity: 1;
 }
 .header__icon--vk {
-  width: 25px;
-  height: 14px;
-}
-.header__icon--fb, .header__icon--inst {
-  width: 20px;
-  height: 18px;
-}
-.header__icon--tg {
-  width: 22px;
-  height: 17px;
+  margin-top: -2px;
 }
 .header__down {
   display: flex;

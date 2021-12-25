@@ -98,7 +98,6 @@
     display: none;
   }
 
-
   &__icon--inst:hover #inst-2 {
     display: block;
   }
@@ -109,20 +108,19 @@
   }
 
   &__icon--vk {
-    width: 25px;
-    height: 14px;
+    margin-top: -2px;
   }
 
-  &__icon--fb,
-  &__icon--inst {
-    width: 20px;
-    height: 18px;
-  }
+  // &__icon--fb,
+  // &__icon--inst {
+  //   width: 20px;
+  //   height: 18px;
+  // }
 
-  &__icon--tg {
-    width: 22px;
-    height: 17px;
-  }
+  // &__icon--tg {
+  //   width: 22px;
+  //   height: 17px;
+  // }
 
   // &__icon--vk::before,
   // &__icon--vk::after,

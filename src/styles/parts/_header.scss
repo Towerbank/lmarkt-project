@@ -65,57 +65,47 @@
   &__social {
     display: flex;
     gap: 10px;
-    align-items: center;
     margin-left: 50px;
     list-style: none;
   }
 
   &__social-icon {
     display: block;
-  }
-
-  &__icon--vk::before,
-  &__icon--vk::after,
-  &__icon--fb::before,
-  &__icon--fb::after,
-  &__icon--inst::before,
-  &__icon--inst::after,
-  &__icon--tg::before,
-  &__icon--tg::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  &__icon--vk::before,
-  &__icon--fb::before,
-  &__icon--inst::before,
-  &__icon--tg::before {
+    color: rgba(45, 0, 39, 1);
     opacity: 0.3;
   }
 
-  &__icon--vk::after,
-  &__icon--fb::after,
-  &__icon--inst::after,
-  &__icon--tg::after {
-    opacity: 0;
-  }
-
-  &__icon--vk:hover::after,
-  &__icon--fb:hover::after,
-  &__icon--inst:hover::after,
-  &__icon--tg:hover::after {
+  &__icon--vk:hover {
+    color: #5282B8;
     opacity: 1;
   }
 
-  &__icon--vk,
-  &__icon--fb,
-  &__icon--inst,
-  &__icon--tg {
-    position: relative;
+  &__icon--fb:hover {
+    color: #3B589E;
+    opacity: 1;
+  }
+
+  &__icon--inst:hover #inst-1 {
+    display: none;
+    opacity: 1;
+  }
+
+  &__icon--inst:hover {
+    opacity: 1;
+  }
+
+  #inst-2 {
+    display: none;
+  }
+
+
+  &__icon--inst:hover #inst-2 {
+    display: block;
+  }
+
+  &__icon--tg:hover {
+    color: #1E96C8;
+    opacity: 1;
   }
 
   &__icon--vk {
@@ -134,37 +124,74 @@
     height: 17px;
   }
 
-  &__icon--vk::before {
-    background: url('../img/vk.svg') no-repeat;
-  }
+  // &__icon--vk::before,
+  // &__icon--vk::after,
+  // &__icon--fb::before,
+  // &__icon--fb::after,
+  // &__icon--inst::before,
+  // &__icon--inst::after,
+  // &__icon--tg::before,
+  // &__icon--tg::after {
+  //   position: absolute;
+  //   content: '';
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0;
+  // }
 
-  &__icon--vk:after {
-    background: url('../img/vk-2.svg') no-repeat;
-  }
+  // &__icon--vk::before,
+  // &__icon--fb::before,
+  // &__icon--inst::before,
+  // &__icon--tg::before {
+  //   opacity: 0.3;
+  // }
 
-  &__icon--fb::before {
-    background: url('../img/fb.svg') no-repeat;
-  }
+  // &__icon--vk::after,
+  // &__icon--fb::after,
+  // &__icon--inst::after,
+  // &__icon--tg::after {
+  //   opacity: 0;
+  // }
 
-  &__icon--fb::after {
-    background: url('../img/fb-2.svg') no-repeat;
-  }
+  // &__icon--vk:hover::after,
+  // &__icon--fb:hover::after,
+  // &__icon--inst:hover::after,
+  // &__icon--tg:hover::after {
+  //   opacity: 1;
+  // }
 
-  &__icon--inst::before {
-    background: url('../img/inst.svg') no-repeat;
-  }
+  // &__icon--vk::before {
+  //   background: url('../img/vk.svg') no-repeat;
+  // }
 
-  &__icon--inst::after {
-    background: url('../img/inst-2.svg') no-repeat;
-  }
+  // &__icon--vk:after {
+  //   background: url('../img/vk-2.svg') no-repeat;
+  // }
 
-  &__icon--tg::before {
-    background: url('../img/tg.svg') no-repeat;
-  }
+  // &__icon--fb::before {
+  //   background: url('../img/fb.svg') no-repeat;
+  // }
 
-  &__icon--tg::after {
-    background: url('../img/tg-2.svg') no-repeat;
-  }
+  // &__icon--fb::after {
+  //   background: url('../img/fb-2.svg') no-repeat;
+  // }
+
+  // &__icon--inst::before {
+  //   background: url('../img/inst.svg') no-repeat;
+  // }
+
+  // &__icon--inst::after {
+  //   background: url('../img/inst-2.svg') no-repeat;
+  // }
+
+  // &__icon--tg::before {
+  //   background: url('../img/tg.svg') no-repeat;
+  // }
+
+  // &__icon--tg::after {
+  //   background: url('../img/tg-2.svg') no-repeat;
+  // }
 
   &__down {
     display: flex;
@@ -321,6 +348,8 @@
 
   &__menu-link {
     text-decoration: none;
+    display: block;
+    color: #A0148E;
   }
 
   &__menu-link:hover {
@@ -329,19 +358,12 @@
 
   &__icon {
     margin-bottom: -10px;
-    fill: currentColor;
   }
 
 
   &__subtitle {
     font-size: 9px;
-    color: #A0148E;
     opacity: 0.6;
-
-  }
-
-  &__subtitle:hover {
-    color: #D866C9;
   }
 
   &__menu-link--4 {
@@ -356,14 +378,34 @@
   &__amount {
     position: absolute;
     color: #FFFFFF;
-    background: url('../img/Ellipse.svg') no-repeat 50% 30%;
-    top: 8%;
-    left: 20%;
+    top: 7%;
+    left: 35%;
     font-size: 9px;
     font-weight: bold;
     width: 11px;
     height: 12px;
-    border: 1px solid #FFF8FE;
+
+    @include media-down(md) {
+      left: 47%;
+    }
+
+    @include media-down(xs) {
+      left: 44%;
+    }
+  }
+
+  &__amount--number {
+    position: absolute;
+    top: 8%;
+    left: 35%;
+
+    @include media-down(md) {
+      left: 47%;
+    }
+
+    @include media-down(xs) {
+      left: 44%;
+    }
   }
 
   &__point--call,
@@ -373,6 +415,8 @@
     @include media-down(md) {
       display: block;
     }
+
+
   }
 
   &__icon--menu {

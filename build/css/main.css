@@ -1193,32 +1193,38 @@ body {
 .header__social {
   display: flex;
   gap: 10px;
-  align-items: center;
   margin-left: 50px;
   list-style: none;
 }
 .header__social-icon {
   display: block;
-}
-.header__icon--vk::before, .header__icon--vk::after, .header__icon--fb::before, .header__icon--fb::after, .header__icon--inst::before, .header__icon--inst::after, .header__icon--tg::before, .header__icon--tg::after {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-}
-.header__icon--vk::before, .header__icon--fb::before, .header__icon--inst::before, .header__icon--tg::before {
+  color: #2d0027;
   opacity: 0.3;
 }
-.header__icon--vk::after, .header__icon--fb::after, .header__icon--inst::after, .header__icon--tg::after {
-  opacity: 0;
-}
-.header__icon--vk:hover::after, .header__icon--fb:hover::after, .header__icon--inst:hover::after, .header__icon--tg:hover::after {
+.header__icon--vk:hover {
+  color: #5282B8;
   opacity: 1;
 }
-.header__icon--vk, .header__icon--fb, .header__icon--inst, .header__icon--tg {
-  position: relative;
+.header__icon--fb:hover {
+  color: #3B589E;
+  opacity: 1;
+}
+.header__icon--inst:hover #inst-1 {
+  display: none;
+  opacity: 1;
+}
+.header__icon--inst:hover {
+  opacity: 1;
+}
+.header #inst-2 {
+  display: none;
+}
+.header__icon--inst:hover #inst-2 {
+  display: block;
+}
+.header__icon--tg:hover {
+  color: #1E96C8;
+  opacity: 1;
 }
 .header__icon--vk {
   width: 25px;
@@ -1231,30 +1237,6 @@ body {
 .header__icon--tg {
   width: 22px;
   height: 17px;
-}
-.header__icon--vk::before {
-  background: url("../img/vk.svg") no-repeat;
-}
-.header__icon--vk:after {
-  background: url("../img/vk-2.svg") no-repeat;
-}
-.header__icon--fb::before {
-  background: url("../img/fb.svg") no-repeat;
-}
-.header__icon--fb::after {
-  background: url("../img/fb-2.svg") no-repeat;
-}
-.header__icon--inst::before {
-  background: url("../img/inst.svg") no-repeat;
-}
-.header__icon--inst::after {
-  background: url("../img/inst-2.svg") no-repeat;
-}
-.header__icon--tg::before {
-  background: url("../img/tg.svg") no-repeat;
-}
-.header__icon--tg::after {
-  background: url("../img/tg-2.svg") no-repeat;
 }
 .header__down {
   display: flex;
@@ -1400,21 +1382,18 @@ body {
 }
 .header__menu-link {
   text-decoration: none;
+  display: block;
+  color: #A0148E;
 }
 .header__menu-link:hover {
   color: #D866C9;
 }
 .header__icon {
   margin-bottom: -10px;
-  fill: currentColor;
 }
 .header__subtitle {
   font-size: 9px;
-  color: #A0148E;
   opacity: 0.6;
-}
-.header__subtitle:hover {
-  color: #D866C9;
 }
 .header__menu-link--4 {
   position: relative;
@@ -1426,14 +1405,37 @@ body {
 .header__amount {
   position: absolute;
   color: #FFFFFF;
-  background: url("../img/Ellipse.svg") no-repeat 50% 30%;
-  top: 8%;
-  left: 20%;
+  top: 7%;
+  left: 35%;
   font-size: 9px;
   font-weight: bold;
   width: 11px;
   height: 12px;
-  border: 1px solid #FFF8FE;
+}
+@media (max-width: 1076.98px) {
+  .header__amount {
+    left: 47%;
+  }
+}
+@media (max-width: 479.98px) {
+  .header__amount {
+    left: 44%;
+  }
+}
+.header__amount--number {
+  position: absolute;
+  top: 8%;
+  left: 35%;
+}
+@media (max-width: 1076.98px) {
+  .header__amount--number {
+    left: 47%;
+  }
+}
+@media (max-width: 479.98px) {
+  .header__amount--number {
+    left: 44%;
+  }
 }
 .header__point--call, .header__point--menu {
   display: none;
